@@ -280,32 +280,45 @@ const after = midAfter != null ? works.slice(midAfter) : [];
       current.classList.add('leaving');
       line.appendChild(next);
 
-      // zoom-through dissolve: scrolling forward the old caption expands past
-      // the viewer and dissolves while the new one solidifies up from smaller;
-      // scrolling back reverses the depth (old shrinks away, new settles down
-      // from larger).
+      // zoom-through dissolve, per piece: the title and the tag each scale
+      // from their own centers, in sync. Scrolling forward the old pieces
+      // expand past the viewer and dissolve while the new ones solidify up
+      // from smaller; scrolling back reverses the depth.
       const timing = { duration: 420, easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)' };
       const grown = 'scale(1.35)';
       const shrunk = 'scale(0.7)';
-      current.style.transformOrigin = 'left center';
-      next.style.transformOrigin = 'left center';
-      current
-        .animate(
+      const outT = dir > 0 ? grown : shrunk;
+      const inT = dir > 0 ? shrunk : grown;
+      const pieces = (el: HTMLElement) =>
+        [
+          el.querySelector<HTMLElement>('[data-focus-title]')!,
+          el.querySelector<HTMLElement>('[data-focus-meta]')!,
+        ];
+
+      const leavingAnims = pieces(current).map((piece) => {
+        piece.style.transformOrigin = 'center center';
+        return piece.animate(
           [
             { transform: 'scale(1)', opacity: 1, filter: 'blur(0px)' },
-            { transform: dir > 0 ? grown : shrunk, opacity: 0, filter: 'blur(6px)' },
+            { transform: outT, opacity: 0, filter: 'blur(6px)' },
           ],
           { ...timing, fill: 'forwards' as FillMode },
-        )
-        .finished.then(() => current.remove())
+        );
+      });
+      Promise.all(leavingAnims.map((a) => a.finished))
+        .then(() => current.remove())
         .catch(() => current.remove());
-      next.animate(
-        [
-          { transform: dir > 0 ? shrunk : grown, opacity: 0, filter: 'blur(6px)' },
-          { transform: 'scale(1)', opacity: 1, filter: 'blur(0px)' },
-        ],
-        timing,
-      );
+
+      pieces(next).forEach((piece) => {
+        piece.style.transformOrigin = 'center center';
+        piece.animate(
+          [
+            { transform: inT, opacity: 0, filter: 'blur(6px)' },
+            { transform: 'scale(1)', opacity: 1, filter: 'blur(0px)' },
+          ],
+          timing,
+        );
+      });
     };
 
     const update = () => {
