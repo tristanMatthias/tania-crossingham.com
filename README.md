@@ -31,7 +31,7 @@ src/content/             ← ALL editable content (see below)
 
 | Collection | Where | What |
 |---|---|---|
-| Artworks | `src/content/works/*.md` | title, gallery room, caption, image, **feature on homepage**, order — plus an optional **"More details"** rich-text body (the story, materials, dimensions) |
+| Artworks | `src/content/works/<slug>/index.md` | one **folder per work with its images co-located** (`main.jpg`, `detail-N.jpg`); frontmatter: title, gallery room, caption, image, more images, **feature on homepage**, order — plus an optional **"More details"** rich-text body (the story, materials, dimensions). Images are optimized at build time via `astro:assets` |
 | Gallery rooms | `src/content/galleries/*.yaml` | room name, intro, room number (roman numeral), thumbnail shape |
 | Pages | `src/content/pages/*.md` | About / Commissions / Workshops / Contact — intro + rich text body |
 | Kind words | `src/content/testimonials/*.yaml` | quote, name, context, order |

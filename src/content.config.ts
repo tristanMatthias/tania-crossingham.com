@@ -17,24 +17,32 @@ const galleries = defineCollection({
 });
 
 /**
- * Artworks. The markdown body is optional "more details" text shown in the
- * fullscreen work view; works without a body just show the image.
+ * Artworks — one folder per work with its images co-located:
+ *   src/content/works/<slug>/index.md + main.jpg + detail-N.jpg
+ * Images go through astro:assets (optimized, responsive at build time).
+ * The markdown body is optional "more details" text shown in the fullscreen
+ * work view; works without a body just show the image.
  */
 const works = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/works' }),
-  schema: z.object({
-    title: z.string(),
-    gallery: reference('galleries'),
-    /** one-line caption, e.g. "Gouache & 23ct gold on vellum" */
-    meta: z.string(),
-    /** main image — shown in strips, grids and first in the work view */
-    image: z.string(),
-    /** additional images (details, closeups) shown in the work view */
-    images: z.array(z.string()).default([]),
-    /** show in the homepage strip */
-    featured: z.boolean().default(false),
-    order: z.number().default(99),
+  loader: glob({
+    pattern: '*/index.md',
+    base: './src/content/works',
+    generateId: ({ entry }) => entry.replace('/index.md', ''),
   }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      gallery: reference('galleries'),
+      /** one-line caption, e.g. "Gouache & 23ct gold on vellum" */
+      meta: z.string(),
+      /** main image — shown in strips, grids and first in the work view */
+      image: image(),
+      /** additional images (details, closeups) shown in the work view */
+      images: z.array(image()).default([]),
+      /** show in the homepage strip */
+      featured: z.boolean().default(false),
+      order: z.number().default(99),
+    }),
 });
 
 const testimonials = defineCollection({

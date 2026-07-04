@@ -4,6 +4,10 @@
 # It is developer-owned: editors (collaborators) can change content
 # through the forms this file describes, but can never edit this file,
 # the templates, or the design.
+#
+# NOTE: currently stale — works moved to folder-per-entry with co-located
+# images (src/content/works/<slug>/index.md), which this works collection
+# does not model yet. Rework or replace before pointing an editor at it.
 
 media:
   input: public/images

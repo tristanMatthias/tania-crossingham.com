@@ -12,6 +12,7 @@
  * full-width image; works without just show the image.
  */
 import { render } from 'astro:content';
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -52,7 +53,7 @@ const slugs = works.map((w) => w.id);
       open && (
         <>
           <figure class="wv-figure">
-            <img src={open.work.data.image} alt={open.work.data.title} />
+            <Image src={open.work.data.image} alt={open.work.data.title} width={2000} />
           </figure>
           <section class="wv-details">
             <div class="wv-diamond">◆</div>
@@ -65,7 +66,7 @@ const slugs = works.map((w) => w.id);
             )}
             {open.work.data.images.map((src) => (
               <figure class="wv-detail-figure">
-                <img src={src} alt={`${open.work.data.title} — detail`} loading="lazy" />
+                <Image src={src} alt={`${open.work.data.title} — detail`} width={1200} loading="lazy" />
               </figure>
             ))}
           </section>
@@ -80,7 +81,7 @@ const slugs = works.map((w) => w.id);
   rendered.map(({ work, Content, hasDetails }) => (
     <template data-work-tpl={work.id}>
       <figure class="wv-figure">
-        <img src={work.data.image} alt={work.data.title} loading="lazy" />
+        <Image src={work.data.image} alt={work.data.title} width={2000} loading="lazy" />
       </figure>
       <section class="wv-details">
         <div class="wv-diamond">◆</div>
@@ -93,7 +94,7 @@ const slugs = works.map((w) => w.id);
         )}
         {work.data.images.map((src) => (
           <figure class="wv-detail-figure">
-            <img src={src} alt={`${work.data.title} — detail`} loading="lazy" />
+            <Image src={src} alt={`${work.data.title} — detail`} width={1200} loading="lazy" />
           </figure>
         ))}
       </section>
