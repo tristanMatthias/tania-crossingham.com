@@ -10,9 +10,15 @@
 # the CMS passes them through untouched — swap artwork images via git or the
 # media browser, not these fields.
 
+# Artwork images live inside each work's folder (src/content/works/<slug>/).
+# The media browser navigates those folders; upload a work's images into its
+# folder and reference them as relative paths (./main.jpg) on the work.
 media:
-  input: public/images
-  output: /images
+  - name: artwork
+    label: Artwork images
+    input: src/content/works
+    output: /src/content/works
+    categories: [image]
 
 content:
   # ————— Artwork —————
