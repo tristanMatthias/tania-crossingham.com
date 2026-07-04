@@ -1,0 +1,221 @@
+# Pages CMS configuration — https://pagescms.org/docs/
+#
+# This file defines the editing UI at https://app.pagescms.org.
+# It is developer-owned: editors (collaborators) can change content
+# through the forms this file describes, but can never edit this file,
+# the templates, or the design.
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  # ————— Artwork —————
+  - name: works
+    label: Artworks
+    description: Every artwork on the site. Tick "Feature on homepage" to show a work in the front-page strip.
+    type: collection
+    path: src/content/works
+    format: yaml-frontmatter
+    filename: '{fields.title}.md'
+    view:
+      fields: [title, gallery, featured, order]
+      sort: [order, title]
+      default:
+        sort: order
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: gallery
+        label: Gallery room
+        type: reference
+        required: true
+        options:
+          collection: galleries
+          search: title
+          value: '{name}'
+          label: '{title}'
+      - name: meta
+        label: Caption
+        description: One line shown under the title, e.g. "Gouache & 23ct gold on vellum"
+        type: string
+      - name: image
+        label: Image
+        type: image
+        required: true
+      - name: images
+        label: More images
+        description: Optional details and closeups, shown when a visitor opens the work
+        type: image
+        list: true
+      - name: featured
+        label: Feature on homepage
+        description: Featured works appear in the strip on the front page
+        type: boolean
+      - name: order
+        label: Order
+        description: Lower numbers appear first
+        type: number
+        default: 99
+      - name: body
+        label: More details
+        description: Optional — the story, materials, dimensions. Shown when a visitor opens the work.
+        type: rich-text
+
+  - name: galleries
+    label: Gallery rooms
+    description: The rooms of the gallery. Room number decides the roman numeral and the order rooms appear in.
+    type: collection
+    path: src/content/galleries
+    format: yaml
+    filename: '{fields.title}.yaml'
+    view:
+      fields: [title, order]
+      sort: [order]
+    fields:
+      - name: title
+        label: Room name
+        type: string
+        required: true
+      - name: intro
+        label: Introduction
+        description: Short line shown under the room title
+        type: text
+      - name: order
+        label: Room number
+        type: number
+        required: true
+      - name: gridAspect
+        label: Thumbnail shape
+        type: select
+        default: portrait
+        options:
+          values:
+            - value: portrait
+              label: Portrait
+            - value: landscape
+              label: Landscape
+            - value: square
+              label: Square
+
+  # ————— Pages —————
+  - name: pages
+    label: Pages
+    description: The written pages — About, Commissions, Workshops, Contact.
+    type: collection
+    path: src/content/pages
+    format: yaml-frontmatter
+    filename: '{fields.title}.md'
+    view:
+      fields: [title, order]
+      sort: [order]
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+      - name: intro
+        label: Introduction
+        description: Short line shown under the page title
+        type: text
+      - name: order
+        label: Nav order
+        type: number
+        default: 99
+      - name: body
+        label: Content
+        type: rich-text
+
+  - name: homepage
+    label: Homepage
+    description: The text on the front page (the featured artworks are chosen on each artwork).
+    type: file
+    path: src/content/homepage.json
+    format: json
+    fields:
+      - name: quoteHeading
+        label: Quote heading
+        description: The large serif line in the homepage strip
+        type: string
+      - name: quoteBody
+        label: Quote text
+        type: text
+      - name: ctaHeading
+        label: Commission panel heading
+        type: string
+      - name: ctaBody
+        label: Commission panel text
+        type: text
+      - name: ctaButton
+        label: Commission button label
+        type: string
+
+  # ————— Kind words —————
+  - name: testimonials
+    label: Kind words
+    description: Quotes from clients, collectors and students.
+    type: collection
+    path: src/content/testimonials
+    format: yaml
+    filename: '{fields.name}.yaml'
+    view:
+      fields: [name, context, order]
+      sort: [order]
+    fields:
+      - name: quote
+        label: Quote
+        type: text
+        required: true
+      - name: name
+        label: Who said it
+        type: string
+        required: true
+      - name: context
+        label: Context
+        description: e.g. "Book cover", "Workshop student"
+        type: string
+      - name: order
+        label: Order
+        type: number
+        default: 99
+
+  # ————— Site —————
+  - name: settings
+    label: Site settings
+    type: file
+    path: src/content/settings.json
+    format: json
+    fields:
+      - name: siteName
+        label: Name
+        type: string
+        required: true
+      - name: credentials
+        label: Credentials line
+        description: The small line under the name in the header
+        type: string
+      - name: location
+        label: Location
+        description: Shown in the footer
+        type: string
+      - name: email
+        label: Contact email
+        type: string
+      - name: social
+        label: Social links
+        type: object
+        fields:
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: youtube
+            label: YouTube
+            type: string
+          - name: patreon
+            label: Patreon
+            type: string
+          - name: newsletter
+            label: Newsletter
+            type: string

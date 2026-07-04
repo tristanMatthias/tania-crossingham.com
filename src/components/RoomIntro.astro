@@ -1,0 +1,52 @@
+---
+import { roman } from '../lib/roman';
+
+interface Props {
+  number?: number;
+  /** shown instead of "Room N" when there is no room number */
+  eyebrow?: string;
+  title: string;
+  intro: string;
+  /** 'strip' renders as a fixed-width column inside a work strip */
+  variant?: 'strip' | 'block';
+}
+
+const { number, eyebrow, title, intro, variant = 'block' } = Astro.props;
+---
+
+<div class:list={['room', variant]}>
+  {
+    (number != null || eyebrow) && (
+      <div class="label-sm gold">{number != null ? `Room ${roman(number)}` : eyebrow}</div>
+    )
+  }
+  <h1 class="display">{title}</h1>
+  <p class="intro muted">{intro}</p>
+  <slot />
+</div>
+
+<style>
+  .room {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-left: 1px solid var(--color-gold-border);
+    padding-left: 36px;
+  }
+
+  .room.strip {
+    flex: none;
+    width: 340px;
+    max-width: 80vw;
+  }
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  .intro {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+  }
+</style>

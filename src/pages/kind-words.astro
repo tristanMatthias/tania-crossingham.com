@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import RoomIntro from '../components/RoomIntro.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CtaPanel from '../components/CtaPanel.astro';
+
+const testimonials = (await getCollection('testimonials')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const galleries = await getCollection('galleries');
+const roomNumber = Math.max(...galleries.map((g) => g.data.order)) + 1;
+
+// images interleaved between cards, echoing the design's masonry
+const interleave = [
+  '/images/works/as-above-so-below.jpg',
+  '/images/works/imperial-letter-patent.jpg',
+  '/images/works/in-the-beginning.jpg',
+];
+---
+
+<Base mode="editorial" title="Kind words" activeNav="about">
+  <main>
+    <RoomIntro
+      number={roomNumber}
+      title="Kind words"
+      intro="From commission clients, collectors and students of the School of Illumination — in their own words."
+    />
+
+    {
+      testimonials.map((t, i) => (
+        <>
+          <TestimonialCard quote={t.data.quote} name={t.data.name} context={t.data.context} />
+          {i % 2 === 0 && interleave[i / 2] && (
+            <figure>
+              <img src={interleave[i / 2]} alt="" loading="lazy" />
+            </figure>
+          )}
+        </>
+      ))
+    }
+
+    <CtaPanel variant="card" />
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main {
+    flex: 1;
+    padding: 64px var(--page-x) 80px;
+    column-width: 380px;
+    column-gap: var(--stack-gap);
+  }
+
+  main > :global(*) {
+    break-inside: avoid;
+    margin-bottom: var(--stack-gap);
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figure img {
+    width: 100%;
+    display: block;
+    box-shadow: var(--shadow-card);
+  }
+</style>

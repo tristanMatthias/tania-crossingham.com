@@ -1,0 +1,90 @@
+---
+import settings from '../content/settings.json';
+
+interface Props {
+  active?: string;
+}
+
+const { active } = Astro.props;
+
+const nav = [
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Commissions', href: '/commissions' },
+  { label: 'Workshops', href: '/workshops' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header>
+  <a class="wordmark" href="/">
+    <span class="name">{settings.siteName}</span>
+    <span class="credentials label-sm muted">{settings.credentials}</span>
+  </a>
+  <nav class="label">
+    {
+      nav.map((item) => (
+        <a href={item.href} class:list={[{ active: active === item.label.toLowerCase() }]}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px var(--page-x) 0;
+    flex: none;
+  }
+
+  .wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .name {
+    font-family: var(--font-serif);
+    font-size: var(--text-wordmark);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .credentials {
+    letter-spacing: var(--tracking-wider);
+    font-size: var(--text-credentials);
+  }
+
+  nav {
+    display: flex;
+    gap: 34px;
+    color: var(--color-muted);
+    padding-top: 6px;
+    flex-wrap: wrap;
+  }
+
+  nav a:hover {
+    color: var(--color-ink);
+  }
+
+  nav a.active {
+    color: var(--color-gold);
+  }
+
+  @media (max-width: 900px) {
+    header {
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    nav {
+      gap: 20px;
+      padding-top: 0;
+    }
+  }
+</style>

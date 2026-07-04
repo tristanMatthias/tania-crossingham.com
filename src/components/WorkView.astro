@@ -1,0 +1,308 @@
+---
+/**
+ * Fullscreen work view for a gallery room.
+ *
+ * Every work in the room gets a real URL (/gallery/<room>/<work>/) — the
+ * room page server-renders this overlay open when `openSlug` is set, so
+ * direct links and no-JS visitors work. With JS, clicks on [data-work-link]
+ * open the overlay in place and drive history (pushState/popstate), so
+ * browser back/forward steps through viewed works.
+ *
+ * Works with a markdown body get a scrollable details section under the
+ * full-width image; works without just show the image.
+ */
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  room: string;
+  works: CollectionEntry<'works'>[];
+  openSlug?: string;
+}
+
+const { room, works, openSlug } = Astro.props;
+
+const rendered = await Promise.all(
+  works.map(async (work) => ({
+    work,
+    Content: (await render(work)).Content,
+    hasDetails: Boolean(work.body?.trim()),
+  })),
+);
+
+const open = openSlug ? rendered.find((r) => r.work.id === openSlug) : undefined;
+const slugs = works.map((w) => w.id);
+---
+
+<div
+  class="work-view"
+  data-work-view
+  data-room={room}
+  data-slugs={JSON.stringify(slugs)}
+  hidden={!open}
+  role="dialog"
+  aria-modal="true"
+  aria-label="Artwork"
+>
+  <button class="wv-btn wv-close" data-wv-close aria-label="Close">✕</button>
+  <button class="wv-btn wv-prev" data-wv-prev aria-label="Previous work">←</button>
+  <button class="wv-btn wv-next" data-wv-next aria-label="Next work">→</button>
+  <div class="wv-scroll" data-wv-content>
+    {
+      open && (
+        <>
+          <figure class="wv-figure">
+            <img src={open.work.data.image} alt={open.work.data.title} />
+          </figure>
+          <section class="wv-details">
+            <div class="wv-diamond">◆</div>
+            <h2 class="wv-title">{open.work.data.title}</h2>
+            <div class="wv-meta label muted">{open.work.data.meta}</div>
+            {open.hasDetails && (
+              <div class="prose wv-prose">
+                <open.Content />
+              </div>
+            )}
+            {open.work.data.images.map((src) => (
+              <figure class="wv-detail-figure">
+                <img src={src} alt={`${open.work.data.title} — detail`} loading="lazy" />
+              </figure>
+            ))}
+          </section>
+        </>
+      )
+    }
+  </div>
+</div>
+
+{/* content for every work in the room, cloned into the shell by the script */}
+{
+  rendered.map(({ work, Content, hasDetails }) => (
+    <template data-work-tpl={work.id}>
+      <figure class="wv-figure">
+        <img src={work.data.image} alt={work.data.title} loading="lazy" />
+      </figure>
+      <section class="wv-details">
+        <div class="wv-diamond">◆</div>
+        <h2 class="wv-title">{work.data.title}</h2>
+        <div class="wv-meta label muted">{work.data.meta}</div>
+        {hasDetails && (
+          <div class="prose wv-prose">
+            <Content />
+          </div>
+        )}
+        {work.data.images.map((src) => (
+          <figure class="wv-detail-figure">
+            <img src={src} alt={`${work.data.title} — detail`} loading="lazy" />
+          </figure>
+        ))}
+      </section>
+    </template>
+  ))
+}
+
+<style>
+  .work-view {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--color-bg);
+  }
+
+  .wv-scroll {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .work-view :global(.wv-figure) {
+    margin: 0;
+  }
+
+  .work-view :global(.wv-detail-figure) {
+    margin: 30px 0 0;
+    width: min(880px, 100%);
+  }
+
+  .work-view :global(.wv-detail-figure img) {
+    width: 100%;
+    display: block;
+    box-shadow: var(--shadow-card);
+  }
+
+  .work-view :global(.wv-figure img) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .work-view :global(.wv-details) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding: 72px var(--page-x) 110px;
+  }
+
+  .work-view :global(.wv-diamond) {
+    color: var(--color-gold);
+    font-size: 12px;
+    letter-spacing: 0.5em;
+  }
+
+  .work-view :global(.wv-title) {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    margin: 0;
+  }
+
+  .work-view :global(.wv-meta) {
+    letter-spacing: var(--tracking-caps);
+  }
+
+  .work-view :global(.wv-prose) {
+    margin-top: 26px;
+    text-align: left;
+    border-top: 1px solid var(--color-gold-border-soft);
+    padding-top: 40px;
+  }
+
+  .wv-btn {
+    position: fixed;
+    z-index: 101;
+    background: rgba(14, 11, 6, 0.72);
+    border: 1px solid var(--color-gold-border-soft);
+    color: var(--color-ink);
+    font-size: 16px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .wv-btn:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold-border);
+  }
+
+  .wv-close {
+    top: 26px;
+    right: var(--page-x);
+  }
+
+  .wv-prev {
+    left: var(--page-x);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .wv-next {
+    right: var(--page-x);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .work-view[data-single] .wv-prev,
+  .work-view[data-single] .wv-next {
+    display: none;
+  }
+</style>
+
+<script>
+  const view = document.querySelector<HTMLElement>('[data-work-view]');
+
+  if (view) {
+    const room = view.dataset.room!;
+    const slugs: string[] = JSON.parse(view.dataset.slugs || '[]');
+    const content = view.querySelector<HTMLElement>('[data-wv-content]')!;
+    const roomUrl = `/gallery/${room}/`;
+
+    if (slugs.length < 2) view.setAttribute('data-single', '');
+
+    let current: string | null = view.hidden ? null : location.pathname.split('/')[3] || null;
+    // true when the gallery page is beneath us in history, so close = back()
+    let openedByPush = false;
+
+    const show = (slug: string) => {
+      const tpl = document.querySelector<HTMLTemplateElement>(`[data-work-tpl="${CSS.escape(slug)}"]`);
+      if (!tpl) return;
+      content.replaceChildren(tpl.content.cloneNode(true));
+      content.scrollTop = 0;
+      view.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      current = slug;
+    };
+
+    const hide = () => {
+      view.hidden = true;
+      document.documentElement.style.overflow = '';
+      current = null;
+      openedByPush = false;
+    };
+
+    const openWork = (slug: string) => {
+      history.pushState({}, '', `${roomUrl}${slug}/`);
+      openedByPush = true;
+      show(slug);
+    };
+
+    const close = () => {
+      if (openedByPush) {
+        history.back();
+      } else {
+        history.pushState({}, '', roomUrl);
+        hide();
+      }
+    };
+
+    const step = (dir: number) => {
+      if (current == null) return;
+      const i = slugs.indexOf(current);
+      const next = slugs[(i + dir + slugs.length) % slugs.length]!;
+      history.pushState({}, '', `${roomUrl}${next}/`);
+      show(next);
+    };
+
+    // intercept work links (image clicks) — no-JS falls back to navigation
+    document.addEventListener('click', (e) => {
+      const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('[data-work-link]');
+      if (!link) return;
+      const slug = link.dataset.workLink;
+      if (!slug) return;
+      e.preventDefault();
+      openWork(slug);
+    });
+
+    view.querySelector('[data-wv-close]')?.addEventListener('click', close);
+    view.querySelector('[data-wv-prev]')?.addEventListener('click', () => step(-1));
+    view.querySelector('[data-wv-next]')?.addEventListener('click', () => step(1));
+
+    document.addEventListener('keydown', (e) => {
+      if (view.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+
+    // browser back/forward: sync the overlay to the URL
+    window.addEventListener('popstate', () => {
+      const parts = location.pathname.split('/').filter(Boolean); // [gallery, room, slug?]
+      const slug = parts[2];
+      if (slug && slugs.includes(slug)) {
+        show(slug);
+      } else {
+        hide();
+      }
+    });
+
+    // direct load of a work URL: lock scroll behind the server-rendered view
+    if (!view.hidden) {
+      document.documentElement.style.overflow = 'hidden';
+    }
+  }
+</script>

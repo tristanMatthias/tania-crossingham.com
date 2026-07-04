@@ -1,0 +1,13 @@
+---
+title: "Viking woman"
+gallery: manuscripts
+meta: "Illumination"
+image: /images/works/viking-woman.jpg
+featured: false
+order: 54
+---
+Based on a photograph I took of a fellow re-enactor at the Armidale Easter gathering in Australia.
+
+Hand drawn on watercolour paper with graphite
+
+Original Image size 14 x 19cm

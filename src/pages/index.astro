@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import WorkStrip from '../components/WorkStrip.astro';
+import CtaPanel from '../components/CtaPanel.astro';
+import homepage from '../content/homepage.json';
+
+// strip order: by room, then by the work's order within its room
+const galleries = await getCollection('galleries');
+const roomOrder = new Map(galleries.map((g) => [g.id, g.data.order]));
+
+const featured = (await getCollection('works', ({ data }) => data.featured)).sort(
+  (a, b) =>
+    (roomOrder.get(a.data.gallery.id) ?? 99) - (roomOrder.get(b.data.gallery.id) ?? 99) ||
+    a.data.order - b.data.order,
+);
+
+// homepage strip images navigate to the work's page in its room
+const works = featured.map((entry) => ({
+  title: entry.data.title,
+  meta: entry.data.meta,
+  image: entry.data.image,
+  href: `/gallery/${entry.data.gallery.id}/${entry.id}/`,
+}));
+---
+
+<Base mode="strip">
+  <WorkStrip
+    works={works}
+    midAfter={3}
+    primaryCta={{ label: 'Commission a work', href: '/commissions' }}
+    secondaryCta={{ label: 'View galleries', href: '/gallery' }}
+  >
+    <div class="quote-card" slot="mid">
+      <div class="diamonds gold">◆ ◆ ◆</div>
+      <div class="quote-heading">{homepage.quoteHeading}</div>
+      <div class="quote-body muted">{homepage.quoteBody}</div>
+      <a class="btn btn--link label" href="/commissions">{homepage.ctaButton} →</a>
+    </div>
+    <CtaPanel slot="end" variant="strip" />
+  </WorkStrip>
+</Base>
+
+<style>
+  .quote-card {
+    flex: none;
+    width: 320px;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .diamonds {
+    font-size: var(--text-label);
+    letter-spacing: 0.5em;
+  }
+
+  .quote-heading {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .quote-body {
+    font-size: 12px;
+    line-height: var(--leading-body);
+  }
+
+  .btn--link {
+    align-self: flex-start;
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+/**
+ * A gallery room — shared by /gallery/[room]/ and /gallery/[room]/[work]/
+ * (the latter renders with the fullscreen work view open).
+ */
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import WorkStrip from './WorkStrip.astro';
+import CtaPanel from './CtaPanel.astro';
+import RoomIntro from './RoomIntro.astro';
+import WorkView from './WorkView.astro';
+
+interface Props {
+  gallery: CollectionEntry<'galleries'>;
+  openSlug?: string;
+}
+
+const { gallery, openSlug } = Astro.props;
+
+const rooms = (await getCollection('galleries')).sort((a, b) => a.data.order - b.data.order);
+const nextRoom = rooms[(rooms.findIndex((r) => r.id === gallery.id) + 1) % rooms.length]!;
+
+const entries = (await getCollection('works', ({ data }) => data.gallery.id === gallery.id)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const works = entries.map((entry) => ({
+  title: entry.data.title,
+  meta: entry.data.meta,
+  image: entry.data.image,
+  slug: entry.id,
+  href: `/gallery/${gallery.id}/${entry.id}/`,
+}));
+
+const openWork = openSlug ? entries.find((e) => e.id === openSlug) : undefined;
+const title = openWork ? openWork.data.title : gallery.data.title;
+---
+
+<Base mode="strip" title={title} activeNav="gallery">
+  <WorkStrip
+    works={works}
+    gridToggle
+    primaryCta={{ label: 'Commission a work', href: '/commissions' }}
+    secondaryCta={{ label: 'Next room', href: `/gallery/${nextRoom.id}` }}
+  >
+    <RoomIntro
+      slot="lead"
+      variant="strip"
+      number={gallery.data.order}
+      title={gallery.data.title}
+      intro={gallery.data.intro}
+    >
+      <a class="next-room label-sm gold" href={`/gallery/${nextRoom.id}`}>
+        Next room · {nextRoom.data.title} →
+      </a>
+    </RoomIntro>
+    <CtaPanel slot="end" variant="strip" />
+
+    <div class="view-grid" data-view-grid slot="grid" hidden>
+      <div class="grid-head">
+        <span class="grid-title">{gallery.data.title}</span>
+        <span class="label muted" style="letter-spacing: var(--tracking-caps)">All works</span>
+      </div>
+      <div class:list={['grid', gallery.data.gridAspect]}>
+        {
+          works.map((w) => (
+            <figure>
+              <a data-work-link={w.slug} href={w.href}>
+                <img src={w.image} alt={w.title} loading="lazy" />
+              </a>
+              <figcaption>{w.title}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </WorkStrip>
+
+  <WorkView room={gallery.id} works={entries} openSlug={openSlug} />
+</Base>
+
+<style>
+  .view-grid {
+    flex: 1;
+    overflow-y: auto;
+    padding: 26px var(--page-x) 34px;
+  }
+
+  .grid-head {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .grid-title {
+    font-family: var(--font-serif);
+    font-size: 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 26px;
+  }
+
+  .grid.landscape {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .grid figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4.2;
+    object-fit: cover;
+    display: block;
+  }
+
+  .grid.landscape img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .grid.square {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .grid.square img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .grid figcaption {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+  }
+</style>
+
+<script>
+  const gridView = document.querySelector<HTMLElement>('[data-view-grid]');
+  const strip = document.querySelector<HTMLElement>('[data-strip]');
+
+  let open = false;
+
+  const setGrid = (next: boolean) => {
+    open = next;
+    if (gridView) gridView.hidden = !open;
+    if (strip) strip.style.display = open ? 'none' : '';
+    document.dispatchEvent(new CustomEvent('grid-state', { detail: { open } }));
+  };
+
+  document.addEventListener('toggle-grid', () => setGrid(!open));
+</script>

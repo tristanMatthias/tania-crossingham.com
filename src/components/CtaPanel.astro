@@ -1,0 +1,57 @@
+---
+import homepage from '../content/homepage.json';
+
+interface Props {
+  /** 'strip' renders as a fixed-width panel inside a work strip */
+  variant?: 'strip' | 'card';
+}
+
+const { variant = 'strip' } = Astro.props;
+---
+
+<div class:list={['cta', variant]}>
+  <div class="diamond">◆</div>
+  <div class="heading">{homepage.ctaHeading}</div>
+  <div class="body muted">{homepage.ctaBody}</div>
+  <a class="btn btn--gold" href="/commissions">{homepage.ctaButton}</a>
+</div>
+
+<style>
+  .cta {
+    border: 1px solid var(--color-gold-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    text-align: center;
+    padding: 60px 46px;
+  }
+
+  .cta.strip {
+    flex: none;
+    width: 460px;
+    max-width: 84vw;
+    height: var(--work-height, auto);
+    padding: 0 48px;
+  }
+
+  .diamond {
+    color: var(--color-gold);
+    font-size: 12px;
+    letter-spacing: 0.5em;
+  }
+
+  .heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-title);
+    line-height: 1.25;
+    max-width: 300px;
+  }
+
+  .body {
+    font-size: 12px;
+    line-height: var(--leading-body);
+    max-width: 280px;
+  }
+</style>

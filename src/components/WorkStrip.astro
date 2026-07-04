@@ -1,0 +1,285 @@
+---
+/**
+ * The signature horizontal gallery strip + its caption footer.
+ * Works scroll horizontally; the work nearest the left edge is "in focus" —
+ * others dim, and the footer shows the focused work's title, caption and
+ * a roman-numeral counter.
+ */
+interface Work {
+  title: string;
+  meta: string;
+  image: string;
+  /** link target for the image (the work's own URL) */
+  href?: string;
+  /** when set, clicks are intercepted by WorkView to open in place */
+  slug?: string;
+}
+
+interface Props {
+  works: Work[];
+  /** insert the `mid` slot after this many works */
+  midAfter?: number;
+  /** show the ⊞ grid-view toggle in the footer (dispatches `toggle-grid`) */
+  gridToggle?: boolean;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}
+
+const { works, midAfter, gridToggle = false, primaryCta, secondaryCta } = Astro.props;
+
+const before = midAfter != null ? works.slice(0, midAfter) : works;
+const after = midAfter != null ? works.slice(midAfter) : [];
+---
+
+<div class="strip" data-strip>
+  <slot name="lead" />
+
+  {
+    before.map((w) => (
+      <figure data-work data-title={w.title} data-meta={w.meta}>
+        {w.href ? (
+          <a data-work-link={w.slug} href={w.href}>
+            <img src={w.image} alt={w.title} loading="lazy" />
+          </a>
+        ) : (
+          <img src={w.image} alt={w.title} loading="lazy" />
+        )}
+      </figure>
+    ))
+  }
+
+  <slot name="mid" />
+
+  {
+    after.map((w) => (
+      <figure data-work data-title={w.title} data-meta={w.meta}>
+        {w.href ? (
+          <a data-work-link={w.slug} href={w.href}>
+            <img src={w.image} alt={w.title} loading="lazy" />
+          </a>
+        ) : (
+          <img src={w.image} alt={w.title} loading="lazy" />
+        )}
+      </figure>
+    ))
+  }
+
+  <slot name="end" />
+  <div class="spacer"></div>
+</div>
+
+<slot name="grid" />
+
+<footer class="strip-footer">
+  <div class="caption">
+    <div class="focus-line">
+      <span class="focus-title" data-focus-title></span>
+      <span class="focus-meta label muted" data-focus-meta></span>
+    </div>
+    <div class="actions">
+      {primaryCta && <a class="btn btn--gold" href={primaryCta.href}>{primaryCta.label}</a>}
+      {secondaryCta && <a class="btn btn--outline" href={secondaryCta.href}>{secondaryCta.label}</a>}
+    </div>
+  </div>
+  <div class="nav muted">
+    {
+      gridToggle && (
+        <button class="arrow grid-toggle gold" data-grid-toggle title="View all works">
+          ⊞
+        </button>
+      )
+    }
+    <button class="arrow" data-prev aria-label="Previous work">←</button>
+    <span class="counter label-sm" data-counter></span>
+    <button class="arrow next" data-next aria-label="Next work">→</button>
+  </div>
+</footer>
+
+<style>
+  .strip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--strip-gap);
+    overflow-x: auto;
+    padding: 20px var(--page-x) 0;
+    scrollbar-width: none;
+    --work-height: min(calc(100vh - 270px), calc((100vw - 320px) * 0.5625));
+  }
+
+  .strip :global([data-work]) {
+    margin: 0;
+    flex: none;
+  }
+
+  .strip :global([data-work] a) {
+    display: block;
+  }
+
+  .strip :global([data-work] img) {
+    height: var(--work-height);
+    min-height: 560px;
+    width: auto;
+    display: block;
+    box-shadow: var(--shadow-work);
+    opacity: 1;
+    transition: var(--fade-work);
+  }
+
+  .spacer {
+    flex: none;
+    width: 200px;
+  }
+
+  .strip-footer {
+    flex: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 26px var(--page-x) 32px;
+  }
+
+  .caption {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .focus-line {
+    display: flex;
+    gap: 24px;
+    align-items: baseline;
+    min-height: 28px;
+  }
+
+  .focus-title {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-quote);
+  }
+
+  .focus-meta {
+    letter-spacing: 0.14em;
+  }
+
+  .actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .arrow {
+    background: none;
+    border: 0;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .arrow.next {
+    color: var(--color-ink);
+  }
+
+  .grid-toggle {
+    font-size: 15px;
+    color: var(--color-gold);
+  }
+
+  .counter {
+    color: inherit;
+  }
+
+  @media (max-width: 760px) {
+    .strip {
+      --work-height: 62vh;
+    }
+
+    .strip :global([data-work] img) {
+      min-height: 0;
+      max-width: 86vw;
+      object-fit: contain;
+    }
+
+    .strip-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script>
+  import { roman } from '../lib/roman';
+
+  const DIM = 0.28;
+
+  document.querySelectorAll<HTMLElement>('[data-strip]').forEach((strip) => {
+    const root = strip.parentElement ?? document.body;
+    const footer = root.querySelector<HTMLElement>('.strip-footer');
+    if (!footer) return;
+
+    const titleEl = footer.querySelector<HTMLElement>('[data-focus-title]');
+    const metaEl = footer.querySelector<HTMLElement>('[data-focus-meta]');
+    const counterEl = footer.querySelector<HTMLElement>('[data-counter]');
+
+    const figs = () => [...strip.querySelectorAll<HTMLElement>('[data-work]')];
+    const padLeft = () => parseFloat(getComputedStyle(strip).paddingLeft) || 64;
+
+    let focus = 0;
+
+    const update = () => {
+      const all = figs();
+      if (!all.length) return;
+      const sl = strip.scrollLeft;
+      const pad = padLeft();
+      let best = 0;
+      let bestD = Infinity;
+      all.forEach((f, i) => {
+        const d = Math.abs(f.offsetLeft - pad - sl);
+        const img = f.querySelector('img');
+        if (img) {
+          const t = Math.min(1, Math.max(0, (d - 260) / 640));
+          img.style.opacity = String(1 - t * (1 - DIM));
+        }
+        if (d < bestD) {
+          bestD = d;
+          best = i;
+        }
+      });
+      focus = best;
+      const f = all[focus];
+      if (titleEl) titleEl.textContent = f?.dataset.title ?? '';
+      if (metaEl) metaEl.textContent = f?.dataset.meta ?? '';
+      if (counterEl) counterEl.textContent = `${roman(focus + 1)} / ${roman(all.length)}`;
+    };
+
+    const goTo = (i: number, smooth = true) => {
+      const all = figs();
+      const target = all[Math.min(all.length - 1, Math.max(0, i))];
+      if (!target) return;
+      strip.scrollTo({ left: target.offsetLeft - padLeft(), behavior: smooth ? 'smooth' : 'auto' });
+    };
+
+    strip.addEventListener('scroll', update, { passive: true });
+    footer.querySelector('[data-prev]')?.addEventListener('click', () => goTo(focus - 1));
+    footer.querySelector('[data-next]')?.addEventListener('click', () => goTo(focus + 1));
+    const gridBtn = footer.querySelector<HTMLElement>('[data-grid-toggle]');
+    gridBtn?.addEventListener('click', () => document.dispatchEvent(new CustomEvent('toggle-grid')));
+    // the page owns grid state; it reports changes so the icon stays in sync
+    document.addEventListener('grid-state', (e) => {
+      if (gridBtn) gridBtn.textContent = (e as CustomEvent).detail.open ? '✕' : '⊞';
+    });
+
+    // expose for the gallery grid view to jump back into the strip
+    (strip as any).__goTo = goTo;
+
+    update();
+    setTimeout(update, 600);
+  });
+</script>

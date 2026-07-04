@@ -1,0 +1,59 @@
+---
+interface Props {
+  quote: string;
+  name: string;
+  context: string;
+}
+
+const { quote, name, context } = Astro.props;
+const trimmed = quote.trim();
+const dropCap = trimmed.charAt(0);
+const rest = trimmed.slice(1);
+---
+
+<div class="card">
+  <div class="quote">
+    <span class="drop-cap">{dropCap}</span>
+    <span class="text">{rest}</span>
+  </div>
+  <div class="attribution">
+    <span class="label" style="letter-spacing: var(--tracking-caps)">{name}</span>
+    <span class="label-sm muted" style="letter-spacing: var(--tracking-caps)">{context}</span>
+  </div>
+</div>
+
+<style>
+  .card {
+    border: 1px solid var(--color-gold-border-soft);
+    padding: 44px 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .quote {
+    display: block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-quote);
+    line-height: var(--leading-quote);
+  }
+
+  .drop-cap {
+    float: left;
+    font-style: normal;
+    font-size: 88px;
+    line-height: 0.72;
+    color: var(--color-gold);
+    margin: 8px 16px 0 0;
+  }
+
+  .attribution {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    border-top: 1px solid var(--color-gold-border-soft);
+    padding-top: 18px;
+  }
+</style>

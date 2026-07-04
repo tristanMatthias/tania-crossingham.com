@@ -1,0 +1,27 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+
+# environment
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# design reference exports (kept locally, too big for the repo — design/clean/ stays tracked)
+design/*.dc.html
+design/.thumbnail
+design/support.js
+design/scratch/
+design/assets/
+*.zip

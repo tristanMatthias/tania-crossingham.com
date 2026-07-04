@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import RoomPage from '../../../components/RoomPage.astro';
+
+export async function getStaticPaths() {
+  const galleries = await getCollection('galleries');
+  return galleries.map((gallery) => ({ params: { room: gallery.id }, props: { gallery } }));
+}
+
+const { gallery } = Astro.props;
+---
+
+<RoomPage gallery={gallery} />

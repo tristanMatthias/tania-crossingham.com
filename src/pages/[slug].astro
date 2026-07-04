@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import RoomIntro from '../components/RoomIntro.astro';
+import settings from '../content/settings.json';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const isContact = page.id === 'contact';
+---
+
+<Base mode="editorial" title={page.data.title} activeNav={page.id}>
+  <main>
+    <RoomIntro eyebrow="The atelier" title={page.data.title} intro={page.data.intro} />
+    <div class="prose">
+      <Content />
+      {
+        isContact && (
+          <p>
+            <a class="btn btn--gold" href={`mailto:${settings.email}`}>
+              Write to Tania
+            </a>
+          </p>
+        )
+      }
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main {
+    flex: 1;
+    padding: 64px var(--page-x) 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 900px;
+  }
+
+  .prose {
+    padding-left: 37px;
+  }
+
+  @media (max-width: 760px) {
+    .prose {
+      padding-left: 0;
+    }
+  }
+</style>

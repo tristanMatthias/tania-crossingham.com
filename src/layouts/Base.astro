@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import settings from '../content/settings.json';
+import Header from '../components/Header.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** strip pages lock to the viewport; editorial pages scroll */
+  mode?: 'strip' | 'editorial';
+  activeNav?: string;
+}
+
+const { title, description, mode = 'editorial', activeNav } = Astro.props;
+const pageTitle = title ? `${title} — ${settings.siteName}` : settings.siteName;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? settings.credentials} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class:list={[`mode-${mode}`]}>
+    <Header active={activeNav} />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .mode-strip {
+    height: 100vh;
+    min-height: 820px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .mode-editorial {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 760px) {
+    .mode-strip {
+      height: auto;
+      min-height: 100vh;
+      overflow: visible;
+    }
+  }
+</style>

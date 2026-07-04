@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+
+// /gallery opens the first room
+const galleries = await getCollection('galleries');
+const first = galleries.sort((a, b) => a.data.order - b.data.order)[0];
+
+return Astro.redirect(`/gallery/${first!.id}`);
+---

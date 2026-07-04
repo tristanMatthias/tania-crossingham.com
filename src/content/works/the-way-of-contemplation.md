@@ -1,0 +1,20 @@
+---
+title: "The way of contemplation"
+gallery: manuscripts
+meta: "Illumination"
+image: /images/works/the-way-of-contemplation.jpg
+featured: false
+order: 36
+images:
+  - /images/works/the-way-of-contemplation-2.jpg
+  - /images/works/the-way-of-contemplation-3.jpg
+---
+This is the path of self-reflection, devotion to one’s divine purpose and balance between all aspects of existence. This translates to a modest life of simplicity, humility and peace that is not a diminishing of self, but a shedding of all that is extraneous, so that the essence of our being may radiate from within.
+
+Based on early Romanesque designs from the twelfth century.
+
+Text by Jan Van Ruysbroeck ( a Flemish mystic 1293 - 1381. )
+
+Hand painted on calfskin parchment using watercolours and ink.
+
+Original Image size 30 x 35 cm
