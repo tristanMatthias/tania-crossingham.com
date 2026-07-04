@@ -6,23 +6,23 @@ import CtaPanel from '../components/CtaPanel.astro';
 import homepage from '../content/homepage.json';
 import { url } from '../lib/url';
 
-// strip order: by room, then by the work's order within its room
-const galleries = await getCollection('galleries');
-const roomOrder = new Map(galleries.map((g) => [g.id, g.data.order]));
+/**
+ * The strip shows the works curated on the Homepage singleton
+ * (a drag-sortable reference list in the CMS), in list order.
+ */
+const allWorks = await getCollection('works');
+const slugOf = (ref: string) =>
+  ref.replace(/^\/?src\/content\/works\//, '').replace(/\/index\.md$/, '');
 
-const featured = (await getCollection('works', ({ data }) => data.featured)).sort(
-  (a, b) =>
-    (roomOrder.get(a.data.gallery) ?? 99) - (roomOrder.get(b.data.gallery) ?? 99) ||
-    a.data.order - b.data.order,
-);
-
-// homepage strip images navigate to the work's page in its room
-const works = featured.map((entry) => ({
-  title: entry.data.title,
-  meta: entry.data.meta,
-  image: entry.data.image,
-  href: url(`/gallery/${entry.data.gallery}/${entry.id}/`),
-}));
+const works = (homepage.works ?? [])
+  .map((ref) => allWorks.find((w) => w.id === slugOf(ref)))
+  .filter((entry) => entry != null)
+  .map((entry) => ({
+    title: entry.data.title,
+    meta: entry.data.meta,
+    image: entry.data.image,
+    href: url(`/gallery/${entry.data.gallery}/${entry.id}/`),
+  }));
 ---
 
 <Base mode="strip">

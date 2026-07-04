@@ -3,7 +3,6 @@ title: "Radiate the Best of Who You Are"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/radiate-the-best-of-who-you-are/main.jpg
-featured: false
 order: 6
 images:
   - src/content/works/radiate-the-best-of-who-you-are/detail-2.jpg

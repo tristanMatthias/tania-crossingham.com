@@ -3,7 +3,6 @@ title: "Non Clamor"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/non-clamor/main.jpg
-featured: false
 order: 47
 images:
   - src/content/works/non-clamor/detail-2.jpg

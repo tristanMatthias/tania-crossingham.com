@@ -3,7 +3,6 @@ title: "Children of Light Mandala"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/children-of-light-mandala/main.jpg
-featured: false
 order: 9
 images:
   - src/content/works/children-of-light-mandala/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Lunae Circuitus"
 gallery: contemporary.yaml
 meta: "Gouache on marbled paper"
 image: src/content/works/luna-circuitus/main.jpg
-featured: true
 order: 1
 images:
   - src/content/works/luna-circuitus/detail-2.jpg

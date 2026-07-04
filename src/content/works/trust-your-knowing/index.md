@@ -3,7 +3,6 @@ title: "Trust in your knowing"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/trust-your-knowing/main.jpg
-featured: false
 order: 37
 images:
   - src/content/works/trust-your-knowing/detail-2.jpg

@@ -3,7 +3,6 @@ title: "The road to self mastery"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-road-to-self-mastery/main.jpg
-featured: false
 order: 14
 images:
   - src/content/works/the-road-to-self-mastery/detail-2.jpg

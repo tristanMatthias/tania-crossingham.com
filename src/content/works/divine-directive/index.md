@@ -3,7 +3,6 @@ title: "Divine directive"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/divine-directive/main.jpg
-featured: false
 order: 7
 images:
   - src/content/works/divine-directive/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Heart Wisdom"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/heart-wisdom/main.jpg
-featured: false
 order: 20
 images:
   - src/content/works/heart-wisdom/detail-2.jpg

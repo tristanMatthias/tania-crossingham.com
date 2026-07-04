@@ -3,7 +3,6 @@ title: "The Invitation"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-invitation/main.jpg
-featured: false
 order: 9
 images:
   - src/content/works/the-invitation/detail-2.jpg

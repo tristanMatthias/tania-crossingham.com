@@ -3,7 +3,6 @@ title: "Balance"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/balance/main.jpg
-featured: false
 order: 57
 images:
   - src/content/works/balance/detail-2.jpg

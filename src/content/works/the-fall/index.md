@@ -3,7 +3,6 @@ title: "The Fall"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-fall/main.jpg
-featured: false
 order: 15
 images:
   - src/content/works/the-fall/detail-2.jpg

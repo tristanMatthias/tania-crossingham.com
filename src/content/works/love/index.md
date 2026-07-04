@@ -3,7 +3,6 @@ title: "Love"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/love/main.jpg
-featured: false
 order: 19
 images:
   - src/content/works/love/detail-2.jpg

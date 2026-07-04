@@ -3,7 +3,6 @@ title: "Connection to the Divine"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/connectiontothedivine/main.jpg
-featured: false
 order: 46
 images:
   - src/content/works/connectiontothedivine/detail-2.jpg

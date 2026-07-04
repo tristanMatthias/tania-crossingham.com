@@ -3,7 +3,6 @@ title: "Sacred Space"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/sacred-space/main.jpg
-featured: false
 order: 62
 images:
   - src/content/works/sacred-space/detail-2.jpg

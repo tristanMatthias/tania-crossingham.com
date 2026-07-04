@@ -3,7 +3,6 @@ title: "Ode to the Soul"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/ode-to-the-soul/main.jpg
-featured: false
 order: 10
 images:
   - src/content/works/ode-to-the-soul/detail-2.jpg

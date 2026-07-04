@@ -3,7 +3,6 @@ title: "Canto delle scolte"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/canto-delle-scolte/main.jpg
-featured: false
 order: 30
 images:
   - src/content/works/canto-delle-scolte/detail-2.jpg

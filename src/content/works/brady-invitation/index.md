@@ -3,7 +3,6 @@ title: "Brady Invitation"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/brady-invitation/main.jpg
-featured: false
 order: 23
 images:
   - src/content/works/brady-invitation/detail-2.jpg

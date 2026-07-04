@@ -3,7 +3,6 @@ title: "Delve into the heart"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/delve-into-the-heart/main.jpg
-featured: false
 order: 23
 images:
   - src/content/works/delve-into-the-heart/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Feast with dragon"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/feast-with-dragon/main.jpg
-featured: false
 order: 21
 images:
   - src/content/works/feast-with-dragon/detail-2.jpg

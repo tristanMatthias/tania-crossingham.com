@@ -3,7 +3,6 @@ title: "Heraldic Fabric Design"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/heraldic-fabric/main.png
-featured: false
 order: 30
 images:
   - src/content/works/heraldic-fabric/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Rheinbergen Wedding Certificate"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/rheinbergenweddingcertificate/main.jpg
-featured: false
 order: 13
 images:
   - src/content/works/rheinbergenweddingcertificate/detail-2.png

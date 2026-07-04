@@ -3,7 +3,6 @@ title: "Juby Family Portrait"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/juby-family-portrait/main.jpg
-featured: false
 order: 27
 images:
   - src/content/works/juby-family-portrait/detail-2.jpg

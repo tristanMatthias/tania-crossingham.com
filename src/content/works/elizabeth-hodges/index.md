@@ -3,7 +3,6 @@ title: "Elizabeth Hodges"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/elizabeth-hodges/main.jpg
-featured: false
 order: 29
 images:
   - src/content/works/elizabeth-hodges/detail-2.jpg

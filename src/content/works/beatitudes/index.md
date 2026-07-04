@@ -3,7 +3,6 @@ title: "Beatitudes"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/beatitudes/main.jpg
-featured: false
 order: 31
 ---
 This style is Romanesque from twelfth century England. The text is from Matthew 5: 3-12.

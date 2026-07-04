@@ -3,7 +3,6 @@ title: "Perfection"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/perfection/main.jpg
-featured: false
 order: 41
 images:
   - src/content/works/perfection/detail-2.jpg

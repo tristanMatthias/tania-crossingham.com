@@ -3,7 +3,6 @@ title: "Al Fahad Family Document"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/fahad-al-farhan/main.jpg
-featured: false
 order: 17
 images:
   - src/content/works/fahad-al-farhan/detail-2.jpg

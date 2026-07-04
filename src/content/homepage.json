@@ -3,5 +3,14 @@
   "quoteBody": "Every piece painted by hand — gouache, ink and 23-carat raised gold on vellum. Built to last centuries.",
   "ctaHeading": "Your story, illuminated in gold on vellum",
   "ctaBody": "Letters patent, armorial bearings, illuminated verse — painted by hand, built to last centuries.",
-  "ctaButton": "Begin a commission"
+  "ctaButton": "Begin a commission",
+  "works": [
+    "src/content/works/as-above-so-below/index.md",
+    "src/content/works/desiderata/index.md",
+    "src/content/works/in-the-beginning/index.md",
+    "src/content/works/imperial-letter-patent/index.md",
+    "src/content/works/kingsley-arms/index.md",
+    "src/content/works/luna-circuitus/index.md",
+    "src/content/works/map-the-fountain-of-youth/index.md"
+  ]
 }

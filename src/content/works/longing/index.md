@@ -3,7 +3,6 @@ title: "Longing"
 gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/longing/main.jpg
-featured: false
 order: 5
 images:
   - src/content/works/longing/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Embrace the Silence"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/embrace-the-silence/main.jpg
-featured: false
 order: 60
 images:
   - src/content/works/embrace-the-silence/detail-2.jpg

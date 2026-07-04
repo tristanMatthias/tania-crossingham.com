@@ -3,7 +3,6 @@ title: "Balancing the Elements"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/balancing-the-elements/main.jpg
-featured: false
 order: 5
 images:
   - src/content/works/balancing-the-elements/detail-2.jpg

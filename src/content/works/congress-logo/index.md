@@ -3,7 +3,6 @@ title: "As Above so Below"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/congress-logo/main.jpg
-featured: false
 order: 24
 images:
   - src/content/works/congress-logo/detail-2.jpg

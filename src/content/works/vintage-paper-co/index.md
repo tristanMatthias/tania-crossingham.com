@@ -3,7 +3,6 @@ title: "Vintage Paper Co"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/vintage-paper-co/main.jpg
-featured: false
 order: 1
 images:
   - src/content/works/vintage-paper-co/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Guinevere"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/guinevere/main.jpg
-featured: false
 order: 49
 images:
   - src/content/works/guinevere/detail-2.jpg

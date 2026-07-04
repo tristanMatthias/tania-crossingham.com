@@ -3,7 +3,6 @@ title: "Meditation among the trees"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/meditation-among-the-trees/main.jpg
-featured: false
 order: 33
 images:
   - src/content/works/meditation-among-the-trees/detail-2.jpg

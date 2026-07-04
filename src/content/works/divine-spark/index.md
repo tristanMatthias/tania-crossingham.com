@@ -3,7 +3,6 @@ title: "Divine Spark Mandala"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/divine-spark/main.jpg
-featured: false
 order: 10
 images:
   - src/content/works/divine-spark/detail-2.jpg

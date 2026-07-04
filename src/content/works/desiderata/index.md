@@ -3,7 +3,6 @@ title: "Desiderata"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/desiderata/main.jpg
-featured: true
 order: 3
 images:
   - src/content/works/desiderata/detail-2.jpg

@@ -3,7 +3,6 @@ title: "To Thy Herte Be Trew"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/to-thy-herte-be-trew/main.jpg
-featured: false
 order: 44
 images:
   - src/content/works/to-thy-herte-be-trew/detail-2.jpg

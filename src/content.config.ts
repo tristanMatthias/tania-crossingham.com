@@ -77,8 +77,7 @@ const works = defineCollection({
       image: workImage,
       /** additional images (details, closeups) shown in the work view */
       images: z.array(workImage).default([]),
-      /** show in the homepage strip */
-      featured: z.boolean().default(false),
+      /** fallback ordering for rooms without a curated works list */
       order: z.number().default(99),
     });
   },

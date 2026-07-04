@@ -3,7 +3,6 @@ title: "The Fitch Family Arms"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/fitch-family-arms/main.jpg
-featured: false
 order: 21
 images:
   - src/content/works/fitch-family-arms/detail-2.jpg

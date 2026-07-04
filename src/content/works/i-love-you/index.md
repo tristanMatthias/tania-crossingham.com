@@ -3,7 +3,6 @@ title: "I love you"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/i-love-you/main.jpg
-featured: false
 order: 29
 images:
   - src/content/works/i-love-you/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Take the Time to Be"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/take-the-time-to-be/main.jpg
-featured: false
 order: 17
 images:
   - src/content/works/take-the-time-to-be/detail-2.jpg

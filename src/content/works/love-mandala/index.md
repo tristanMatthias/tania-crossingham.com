@@ -3,7 +3,6 @@ title: "Love Mandala"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/love-mandala/main.jpg
-featured: false
 order: 12
 images:
   - src/content/works/love-mandala/detail-2.jpg

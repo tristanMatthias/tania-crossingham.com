@@ -3,7 +3,6 @@ title: "Cover for The Last Unicorn"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/cover-for-the-last-unicorn/main.jpg
-featured: false
 order: 10
 images:
   - src/content/works/cover-for-the-last-unicorn/detail-2.jpg

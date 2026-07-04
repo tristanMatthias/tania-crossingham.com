@@ -3,7 +3,6 @@ title: "Arthurian Gothic Revival Design"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/arthurian-gothic-revival-design/main.jpg
-featured: false
 order: 37
 images:
   - src/content/works/arthurian-gothic-revival-design/detail-2.jpg

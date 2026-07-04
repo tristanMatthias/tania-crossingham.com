@@ -3,7 +3,6 @@ title: "Virgin & Unicorn"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/virgin-unicorn/main.jpg
-featured: false
 order: 11
 images:
   - src/content/works/virgin-unicorn/detail-2.jpg

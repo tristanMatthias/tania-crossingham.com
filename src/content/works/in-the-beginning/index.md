@@ -3,7 +3,6 @@ title: "In the beginning"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/in-the-beginning/main.jpg
-featured: true
 order: 24
 images:
   - src/content/works/in-the-beginning/detail-2.jpg

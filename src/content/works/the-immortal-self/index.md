@@ -3,7 +3,6 @@ title: "The immortal self"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-immortal-self/main.jpg
-featured: false
 order: 13
 images:
   - src/content/works/the-immortal-self/detail-2.jpg

@@ -3,7 +3,6 @@ title: "We Are One"
 gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/we-are-one/main.jpg
-featured: false
 order: 3
 images:
   - src/content/works/we-are-one/detail-2.jpg

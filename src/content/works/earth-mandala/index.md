@@ -3,7 +3,6 @@ title: "Earth Mandala"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/earth-mandala/main.jpg
-featured: false
 order: 11
 images:
   - src/content/works/earth-mandala/detail-2.jpg

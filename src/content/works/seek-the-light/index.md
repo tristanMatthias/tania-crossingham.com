@@ -3,7 +3,6 @@ title: "Seek the Light"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/seek-the-light/main.jpg
-featured: false
 order: 8
 images:
   - src/content/works/seek-the-light/detail-2.jpg

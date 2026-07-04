@@ -3,7 +3,6 @@ title: "As Above so Below"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/know-thyself/main.jpg
-featured: false
 order: 58
 images:
   - src/content/works/know-thyself/detail-2.jpg

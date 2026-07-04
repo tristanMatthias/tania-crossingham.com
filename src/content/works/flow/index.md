@@ -3,7 +3,6 @@ title: "Flow"
 gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/flow/main.jpg
-featured: false
 order: 4
 images:
   - src/content/works/flow/detail-2.jpg

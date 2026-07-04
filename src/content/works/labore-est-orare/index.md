@@ -3,7 +3,6 @@ title: "Labore est Orare"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/labore-est-orare/main.jpg
-featured: false
 order: 40
 images:
   - src/content/works/labore-est-orare/detail-2.jpg

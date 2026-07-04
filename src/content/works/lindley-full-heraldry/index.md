@@ -3,7 +3,6 @@ title: "Lindley Family Heraldry"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/lindley-full-heraldry/main.jpg
-featured: false
 order: 11
 images:
   - src/content/works/lindley-full-heraldry/detail-2.jpg

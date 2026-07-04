@@ -3,7 +3,6 @@ title: "The way of contemplation"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-way-of-contemplation/main.jpg
-featured: false
 order: 36
 images:
   - src/content/works/the-way-of-contemplation/detail-2.jpg

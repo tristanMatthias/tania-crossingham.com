@@ -3,7 +3,6 @@ title: "Knights battling"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/knights-battling/main.jpg
-featured: false
 order: 12
 images:
   - src/content/works/knights-battling/detail-2.jpg

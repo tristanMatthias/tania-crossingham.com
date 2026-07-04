@@ -3,7 +3,6 @@ title: "Renew the mind"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/renew-the-mind/main.jpg
-featured: false
 order: 38
 images:
   - src/content/works/renew-the-mind/detail-2.jpg

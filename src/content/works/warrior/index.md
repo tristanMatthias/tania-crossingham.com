@@ -3,7 +3,6 @@ title: "Warrior"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/warrior/main.jpg
-featured: false
 order: 55
 ---
 Based on a photograph I took of a fellow re-enactor at the Armidale Easter gathering in Australia.

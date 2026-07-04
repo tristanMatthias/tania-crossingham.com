@@ -3,7 +3,6 @@ title: "As Above so Below"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/beyond-the-mundane/main.jpg
-featured: false
 order: 45
 images:
   - src/content/works/beyond-the-mundane/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Believe in Yourself"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/believe-in-yourself/main.jpg
-featured: false
 order: 2
 images:
   - src/content/works/believe-in-yourself/detail-2.jpg

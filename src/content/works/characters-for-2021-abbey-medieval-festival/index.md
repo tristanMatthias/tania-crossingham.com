@@ -3,7 +3,6 @@ title: "Characters — Abbey Medieval Festival 2021"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/characters-for-2021-abbey-medieval-festival/main.jpg
-featured: false
 order: 8
 images:
   - src/content/works/characters-for-2021-abbey-medieval-festival/detail-2.jpg

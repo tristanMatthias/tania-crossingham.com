@@ -3,7 +3,6 @@ title: "Scandinavian Heraldry Society"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/scandinavian-heraldry-society/main.jpg
-featured: false
 order: 32
 images:
   - src/content/works/scandinavian-heraldry-society/detail-2.png

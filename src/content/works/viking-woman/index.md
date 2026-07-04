@@ -3,7 +3,6 @@ title: "Viking woman"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/viking-woman/main.jpg
-featured: false
 order: 54
 ---
 Based on a photograph I took of a fellow re-enactor at the Armidale Easter gathering in Australia.

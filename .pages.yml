@@ -25,14 +25,14 @@ content:
   # ————— Artwork —————
   - name: works
     label: Artworks
-    description: Every artwork on the site. Tick "Feature on homepage" to show a work in the front-page strip. Which works appear in a room — and their order — is set on the Gallery room.
+    description: Every artwork on the site. Which works appear in a room — and on the homepage — is set on the Gallery room / Homepage.
     type: collection
     path: src/content/works
     format: yaml-frontmatter
     filename: '{fields.title}/index.md'
     subfolders: true
     view:
-      fields: [title, gallery, featured]
+      fields: [title, gallery]
       sort: [title]
     fields:
       - name: title
@@ -66,10 +66,6 @@ content:
         list: true
         options:
           media: artwork
-      - name: featured
-        label: Feature on homepage
-        description: Featured works appear in the strip on the front page
-        type: boolean
       - name: order
         label: Fallback order
         description: Only used in rooms without a curated works list
@@ -151,11 +147,21 @@ content:
 
   - name: homepage
     label: Homepage
-    description: The text on the front page (the featured artworks are chosen on each artwork).
+    description: The front page — its text and the artworks in the strip.
     type: file
     path: src/content/homepage.json
     format: json
     fields:
+      - name: works
+        label: Artworks in the strip
+        description: Pick the works shown on the homepage and drag to set their order.
+        type: reference
+        list: true
+        options:
+          collection: works
+          search: title
+          value: '{path}'
+          label: '{title}'
       - name: quoteHeading
         label: Quote heading
         description: The large serif line in the homepage strip

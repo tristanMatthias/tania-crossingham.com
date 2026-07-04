@@ -3,7 +3,6 @@ title: "Rosalie Gilbert's Book Cover"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/rosalie-gilberts-bookcover/main.jpg
-featured: false
 order: 6
 images:
   - src/content/works/rosalie-gilberts-bookcover/detail-2.jpg

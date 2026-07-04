@@ -3,7 +3,6 @@ title: "Illuminating the Shadow World"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/illuminating-the-shadow-world/main.jpg
-featured: false
 order: 16
 images:
   - src/content/works/illuminating-the-shadow-world/detail-2.jpg

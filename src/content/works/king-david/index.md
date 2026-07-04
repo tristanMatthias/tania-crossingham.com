@@ -3,7 +3,6 @@ title: "King David and Psalm 63"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/king-david/main.jpg
-featured: false
 order: 17
 images:
   - src/content/works/king-david/detail-2.jpg

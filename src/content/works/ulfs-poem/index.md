@@ -3,7 +3,6 @@ title: "Ulf's Poem"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/ulfs-poem/main.jpg
-featured: false
 order: 2
 images:
   - src/content/works/ulfs-poem/detail-2.jpg

@@ -3,7 +3,6 @@ title: "H for Hildegard"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/hforhildegard/main.jpg
-featured: false
 order: 4
 images:
   - src/content/works/hforhildegard/detail-2.jpg

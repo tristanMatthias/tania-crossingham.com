@@ -3,7 +3,6 @@ title: "Celtic Bard"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/celtic-bard/main.jpg
-featured: false
 order: 52
 ---
 Based on a photograph I took of a fellow re-enactor at the Armidale Easter gathering in Australia.

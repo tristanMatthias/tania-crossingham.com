@@ -3,7 +3,6 @@ title: "Behind Mind Mandala"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/behind-mind-mandala/main.jpg
-featured: false
 order: 8
 images:
   - src/content/works/behind-mind-mandala/detail-2.jpg

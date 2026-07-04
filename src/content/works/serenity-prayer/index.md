@@ -3,7 +3,6 @@ title: "Serenity prayer"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/serenity-prayer/main.jpg
-featured: false
 order: 18
 images:
   - src/content/works/serenity-prayer/detail-2.jpg

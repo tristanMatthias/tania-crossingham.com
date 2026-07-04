@@ -3,7 +3,6 @@ title: "Bookplate for Tim Wilkins"
 gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/bookplate-design-for-tim-wilkins/main.jpg
-featured: false
 order: 15
 images:
   - src/content/works/bookplate-design-for-tim-wilkins/detail-2.jpg

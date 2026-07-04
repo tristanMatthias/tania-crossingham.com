@@ -3,7 +3,6 @@ title: "Potential"
 gallery: contemporary.yaml
 meta: "Gouache on marbled pastel paper"
 image: src/content/works/potential/main.jpg
-featured: false
 order: 8
 images:
   - src/content/works/potential/detail-2.jpg

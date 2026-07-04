@@ -3,7 +3,6 @@ title: "If Only…"
 gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/if-only/main.jpg
-featured: false
 order: 15
 images:
   - src/content/works/if-only/detail-2.jpg

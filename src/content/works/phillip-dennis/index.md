@@ -3,7 +3,6 @@ title: "Phillip Dennis"
 gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/phillip-dennis/main.jpg
-featured: false
 order: 9
 images:
   - src/content/works/phillip-dennis/detail-2.jpg

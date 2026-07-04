@@ -3,7 +3,6 @@ title: "Thelawofone"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/thelawofone/main.jpg
-featured: false
 order: 59
 images:
   - src/content/works/thelawofone/detail-2.jpg

@@ -3,7 +3,6 @@ title: "Peace"
 gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/peace/main.jpg
-featured: false
 order: 16
 ---
 Peace in this world is something that we all long for, yet it could be achieved overnight if each individual cultivated peace within their heart and mind. Being more aware of how we think, speak and act towards others in our life will bring not only peace to ourselves but filter into mass consciousness bringing about the changes we all so desperately desire. BE the change that you want to see in the world.
