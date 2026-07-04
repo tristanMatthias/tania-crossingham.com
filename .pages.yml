@@ -34,6 +34,11 @@ content:
     view:
       fields: [title, gallery]
       sort: [title]
+      # folder-per-entry: each work is <slug>/index.md; node view surfaces
+      # those as entries (and makes them resolvable by reference fields)
+      node:
+        filename: index.md
+        hideDirs: nodes
     fields:
       - name: title
         label: Title
