@@ -75,9 +75,11 @@ const after = midAfter != null ? works.slice(midAfter) : [];
 
 <footer class="strip-footer">
   <div class="caption">
-    <div class="focus-line">
-      <span class="focus-title" data-focus-title></span>
-      <span class="focus-meta label muted" data-focus-meta></span>
+    <div class="focus-line" data-focus-line>
+      <div class="focus-swap" data-focus-swap>
+        <span class="focus-title" data-focus-title></span>
+        <span class="focus-meta label muted" data-focus-meta></span>
+      </div>
     </div>
     <div class="actions">
       {primaryCta && <a class="btn btn--gold" href={primaryCta.href}>{primaryCta.label}</a>}
@@ -150,10 +152,22 @@ const after = midAfter != null ? works.slice(midAfter) : [];
   }
 
   .focus-line {
+    position: relative;
+    min-height: 28px;
+    overflow: hidden;
+  }
+
+  .focus-swap {
     display: flex;
     gap: 24px;
     align-items: baseline;
     min-height: 28px;
+  }
+
+  .focus-swap.leaving {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
   }
 
   .focus-title {
@@ -227,14 +241,63 @@ const after = midAfter != null ? works.slice(midAfter) : [];
     const footer = root.querySelector<HTMLElement>('.strip-footer');
     if (!footer) return;
 
-    const titleEl = footer.querySelector<HTMLElement>('[data-focus-title]');
-    const metaEl = footer.querySelector<HTMLElement>('[data-focus-meta]');
+    const line = footer.querySelector<HTMLElement>('[data-focus-line]');
     const counterEl = footer.querySelector<HTMLElement>('[data-counter]');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const figs = () => [...strip.querySelectorAll<HTMLElement>('[data-work]')];
     const padLeft = () => parseFloat(getComputedStyle(strip).paddingLeft) || 64;
 
     let focus = 0;
+    let captionReady = false;
+
+    /**
+     * Swap the footer caption. The old caption slides out and fades in the
+     * scroll direction while the new one slides in from the opposite side:
+     * scrolling forward, old exits up / new enters from below — reversed
+     * when scrolling back.
+     */
+    const setCaption = (title: string, meta: string, dir: number) => {
+      if (!line) return;
+      const current = line.querySelector<HTMLElement>('[data-focus-swap]:not(.leaving)');
+      if (!current) return;
+      const t = current.querySelector<HTMLElement>('[data-focus-title]')!;
+      const m = current.querySelector<HTMLElement>('[data-focus-meta]')!;
+      if (t.textContent === title && m.textContent === meta) return;
+
+      if (!captionReady || reduceMotion) {
+        t.textContent = title;
+        m.textContent = meta;
+        return;
+      }
+
+      const next = current.cloneNode(true) as HTMLElement;
+      next.querySelector<HTMLElement>('[data-focus-title]')!.textContent = title;
+      next.querySelector<HTMLElement>('[data-focus-meta]')!.textContent = meta;
+
+      line.querySelectorAll('.leaving').forEach((el) => el.remove());
+      current.classList.add('leaving');
+      line.appendChild(next);
+
+      const timing = { duration: 380, easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)' };
+      current
+        .animate(
+          [
+            { transform: 'translateY(0)', opacity: 1 },
+            { transform: `translateY(${-dir * 90}%)`, opacity: 0 },
+          ],
+          { ...timing, fill: 'forwards' as FillMode },
+        )
+        .finished.then(() => current.remove())
+        .catch(() => current.remove());
+      next.animate(
+        [
+          { transform: `translateY(${dir * 90}%)`, opacity: 0 },
+          { transform: 'translateY(0)', opacity: 1 },
+        ],
+        timing,
+      );
+    };
 
     const update = () => {
       const all = figs();
@@ -255,10 +318,11 @@ const after = midAfter != null ? works.slice(midAfter) : [];
           best = i;
         }
       });
+      const dir = best >= focus ? 1 : -1;
       focus = best;
       const f = all[focus];
-      if (titleEl) titleEl.textContent = f?.dataset.title ?? '';
-      if (metaEl) metaEl.textContent = f?.dataset.meta ?? '';
+      setCaption(f?.dataset.title ?? '', f?.dataset.meta ?? '', dir);
+      captionReady = true;
       if (counterEl) counterEl.textContent = `${roman(focus + 1)} / ${roman(all.length)}`;
     };
 
