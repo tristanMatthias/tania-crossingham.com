@@ -1,6 +1,6 @@
 ---
 title: "The Arms of James Krenitsky"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/james-krenitsky/main.jpg
 featured: false

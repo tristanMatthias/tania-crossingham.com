@@ -1,6 +1,6 @@
 ---
 title: "Abbey 2020 Promotional Artwork"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/abbey-2020-promotional-artwork/main.jpg
 featured: false

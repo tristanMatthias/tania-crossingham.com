@@ -1,6 +1,6 @@
 ---
 title: "The Arms of the Turbeville family"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/turbeville-arms/main.jpg
 featured: false

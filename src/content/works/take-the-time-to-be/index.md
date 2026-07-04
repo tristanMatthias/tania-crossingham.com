@@ -1,6 +1,6 @@
 ---
 title: "Take the Time to Be"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/take-the-time-to-be/main.jpg
 featured: false

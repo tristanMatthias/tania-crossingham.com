@@ -1,6 +1,6 @@
 ---
 title: "All Is in the All"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/all-is-in-the-all/main.png
 featured: false

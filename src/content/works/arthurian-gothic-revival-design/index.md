@@ -1,6 +1,6 @@
 ---
 title: "Arthurian Gothic Revival Design"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/arthurian-gothic-revival-design/main.jpg
 featured: false

@@ -12,7 +12,7 @@ const roomOrder = new Map(galleries.map((g) => [g.id, g.data.order]));
 
 const featured = (await getCollection('works', ({ data }) => data.featured)).sort(
   (a, b) =>
-    (roomOrder.get(a.data.gallery.id) ?? 99) - (roomOrder.get(b.data.gallery.id) ?? 99) ||
+    (roomOrder.get(a.data.gallery) ?? 99) - (roomOrder.get(b.data.gallery) ?? 99) ||
     a.data.order - b.data.order,
 );
 
@@ -21,7 +21,7 @@ const works = featured.map((entry) => ({
   title: entry.data.title,
   meta: entry.data.meta,
   image: entry.data.image,
-  href: url(`/gallery/${entry.data.gallery.id}/${entry.id}/`),
+  href: url(`/gallery/${entry.data.gallery}/${entry.id}/`),
 }));
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Deed of Assignation — Brady Brim-DeForest"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/deedofassignationforbradybrimde-forest/main.jpg
 featured: false

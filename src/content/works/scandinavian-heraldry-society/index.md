@@ -1,6 +1,6 @@
 ---
 title: "Scandinavian Heraldry Society"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/scandinavian-heraldry-society/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "Delve into the heart"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/delve-into-the-heart/main.jpg
 featured: false

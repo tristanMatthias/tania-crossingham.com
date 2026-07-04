@@ -1,6 +1,6 @@
 ---
 title: "D with Jewel"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/d-with-jewel/main.jpg
 featured: false

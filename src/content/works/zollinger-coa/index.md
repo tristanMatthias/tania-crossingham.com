@@ -1,6 +1,6 @@
 ---
 title: "The Arms of the Zöllinger Family"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/zollinger-coa/main.jpg
 featured: false

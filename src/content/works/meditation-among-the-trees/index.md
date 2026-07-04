@@ -1,6 +1,6 @@
 ---
 title: "Meditation among the trees"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/meditation-among-the-trees/main.jpg
 featured: false

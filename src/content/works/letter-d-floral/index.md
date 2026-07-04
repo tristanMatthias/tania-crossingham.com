@@ -1,6 +1,6 @@
 ---
 title: "D — Floral"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-d-floral/main.png
 featured: false

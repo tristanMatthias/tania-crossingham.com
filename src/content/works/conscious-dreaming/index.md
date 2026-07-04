@@ -1,6 +1,6 @@
 ---
 title: "Conscious Dreaming"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Watercolour, ink & gold leaf"
 image: src/content/works/conscious-dreaming/main.jpg
 featured: false

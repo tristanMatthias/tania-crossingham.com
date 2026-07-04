@@ -1,6 +1,6 @@
 ---
 title: "Phillip Dennis"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/phillip-dennis/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "O — Ode to the Soul"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-o-ode-to-the-soul/main.jpg
 featured: false

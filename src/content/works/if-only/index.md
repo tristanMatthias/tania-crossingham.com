@@ -1,6 +1,6 @@
 ---
 title: "If Only…"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/if-only/main.jpg
 featured: false

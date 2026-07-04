@@ -1,6 +1,6 @@
 ---
 title: "Guinevere"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/guinevere/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "Believe in Yourself"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/believe-in-yourself/main.jpg
 featured: false

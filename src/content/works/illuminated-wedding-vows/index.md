@@ -1,6 +1,6 @@
 ---
 title: "Illuminated Wedding Vows"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/illuminated-wedding-vows/main.jpg
 featured: false

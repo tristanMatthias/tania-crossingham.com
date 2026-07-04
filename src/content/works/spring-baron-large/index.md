@@ -1,6 +1,6 @@
 ---
 title: "Spring Baron"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/spring-baron-large/main.jpg
 featured: false

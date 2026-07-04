@@ -1,6 +1,6 @@
 ---
 title: "Bohemian Arms for the Stanic Family"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/15thcentury-bohemian-heraldry/main.jpg
 featured: false

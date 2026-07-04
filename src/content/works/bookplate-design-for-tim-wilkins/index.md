@@ -1,6 +1,6 @@
 ---
 title: "Bookplate for Tim Wilkins"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/bookplate-design-for-tim-wilkins/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "King David and Psalm 63"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/king-david/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "Seek the Light"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/seek-the-light/main.jpg
 featured: false

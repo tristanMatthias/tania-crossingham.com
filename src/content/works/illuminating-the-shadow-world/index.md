@@ -1,6 +1,6 @@
 ---
 title: "Illuminating the Shadow World"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/illuminating-the-shadow-world/main.jpg
 featured: false

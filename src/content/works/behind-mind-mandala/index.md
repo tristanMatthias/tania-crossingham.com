@@ -1,6 +1,6 @@
 ---
 title: "Behind Mind Mandala"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/behind-mind-mandala/main.jpg
 featured: false

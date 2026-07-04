@@ -1,6 +1,6 @@
 ---
 title: "Flow"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/flow/main.jpg
 featured: false

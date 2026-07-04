@@ -1,6 +1,6 @@
 ---
 title: "Baudelaire Fantasy Heraldry"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/baudelaire/main.jpg
 featured: false

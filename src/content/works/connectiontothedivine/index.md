@@ -1,6 +1,6 @@
 ---
 title: "Connection to the Divine"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/connectiontothedivine/main.jpg
 featured: false

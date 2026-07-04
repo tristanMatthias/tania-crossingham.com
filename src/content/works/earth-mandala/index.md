@@ -1,6 +1,6 @@
 ---
 title: "Earth Mandala"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/earth-mandala/main.jpg
 featured: false

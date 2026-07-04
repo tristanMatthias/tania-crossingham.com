@@ -1,6 +1,6 @@
 ---
 title: "The Ecstasy of Light"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/the-ecstasy-of-light/main.jpg
 featured: false

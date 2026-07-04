@@ -1,6 +1,6 @@
 ---
 title: "Viking woman"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/viking-woman/main.jpg
 featured: false

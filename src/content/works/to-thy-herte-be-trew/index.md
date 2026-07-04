@@ -1,6 +1,6 @@
 ---
 title: "To Thy Herte Be Trew"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/to-thy-herte-be-trew/main.jpg
 featured: false

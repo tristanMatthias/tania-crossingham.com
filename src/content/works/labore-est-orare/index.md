@@ -1,6 +1,6 @@
 ---
 title: "Labore est Orare"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/labore-est-orare/main.jpg
 featured: false

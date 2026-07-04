@@ -1,6 +1,6 @@
 ---
 title: "O — for Olaf"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-o-for-olaf/main.png
 featured: false

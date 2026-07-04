@@ -1,6 +1,6 @@
 ---
 title: "Order of St George the Martyr"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/order-of-st-george-the-martyr/main.jpg
 featured: false

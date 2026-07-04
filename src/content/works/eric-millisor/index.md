@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Eric Millisor"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/eric-millisor/main.jpg
 featured: false

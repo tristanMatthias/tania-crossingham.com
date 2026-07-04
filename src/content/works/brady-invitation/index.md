@@ -1,6 +1,6 @@
 ---
 title: "Brady Invitation"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/brady-invitation/main.jpg
 featured: false

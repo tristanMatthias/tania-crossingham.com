@@ -1,6 +1,6 @@
 ---
 title: "The Annunciation"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-annunciation/main.jpg
 featured: false

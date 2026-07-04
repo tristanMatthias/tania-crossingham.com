@@ -1,6 +1,6 @@
 ---
 title: "Potential"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Gouache on marbled pastel paper"
 image: src/content/works/potential/main.jpg
 featured: false

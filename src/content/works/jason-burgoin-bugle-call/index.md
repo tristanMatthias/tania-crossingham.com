@@ -1,6 +1,6 @@
 ---
 title: "Bugle Call — Jason Burgoin"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/jason-burgoin-bugle-call/main.jpg
 featured: false

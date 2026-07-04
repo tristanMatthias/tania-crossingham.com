@@ -23,7 +23,7 @@ const { gallery, openSlug } = Astro.props;
 const rooms = (await getCollection('galleries')).sort((a, b) => a.data.order - b.data.order);
 const nextRoom = rooms[(rooms.findIndex((r) => r.id === gallery.id) + 1) % rooms.length]!;
 
-const roomWorks = await getCollection('works', ({ data }) => data.gallery.id === gallery.id);
+const roomWorks = await getCollection('works', ({ data }) => data.gallery === gallery.id);
 
 // curated rooms show exactly the listed works, in list order;
 // rooms without a list show all their works by `order`

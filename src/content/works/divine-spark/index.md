@@ -1,6 +1,6 @@
 ---
 title: "Divine Spark Mandala"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/divine-spark/main.jpg
 featured: false

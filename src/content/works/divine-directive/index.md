@@ -1,6 +1,6 @@
 ---
 title: "Divine directive"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/divine-directive/main.jpg
 featured: false

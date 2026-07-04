@@ -1,6 +1,6 @@
 ---
 title: "C — Eagles"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-c-eagles/main.png
 featured: false

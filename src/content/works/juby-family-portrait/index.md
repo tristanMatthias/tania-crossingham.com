@@ -1,6 +1,6 @@
 ---
 title: "Juby Family Portrait"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/juby-family-portrait/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "As Above So Below"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/as-above-so-below/main.jpg
 featured: true

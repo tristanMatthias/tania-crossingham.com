@@ -1,6 +1,6 @@
 ---
 title: "P"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-p/main.png
 featured: false

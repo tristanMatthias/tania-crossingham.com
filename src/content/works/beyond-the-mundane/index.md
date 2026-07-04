@@ -1,6 +1,6 @@
 ---
 title: "As Above so Below"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/beyond-the-mundane/main.jpg
 featured: false

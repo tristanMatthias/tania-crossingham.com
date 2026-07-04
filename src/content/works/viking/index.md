@@ -1,6 +1,6 @@
 ---
 title: "Viking"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/viking/main.jpg
 featured: false

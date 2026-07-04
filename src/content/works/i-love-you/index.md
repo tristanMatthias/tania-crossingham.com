@@ -1,6 +1,6 @@
 ---
 title: "I love you"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/i-love-you/main.jpg
 featured: false

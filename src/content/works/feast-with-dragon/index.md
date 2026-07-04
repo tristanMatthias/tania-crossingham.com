@@ -1,6 +1,6 @@
 ---
 title: "Feast with dragon"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/feast-with-dragon/main.jpg
 featured: false

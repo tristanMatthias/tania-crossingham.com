@@ -1,6 +1,6 @@
 ---
 title: "The Fitch Family Arms"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/fitch-family-arms/main.jpg
 featured: false

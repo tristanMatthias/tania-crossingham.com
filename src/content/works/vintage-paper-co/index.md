@@ -1,6 +1,6 @@
 ---
 title: "Vintage Paper Co"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/vintage-paper-co/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "The Noctes Atticae of Aulus Gallius"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-noctes-atticae-of-aulus-gallius/main.jpg
 featured: false

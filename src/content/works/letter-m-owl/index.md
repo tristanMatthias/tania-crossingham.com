@@ -1,6 +1,6 @@
 ---
 title: "M — Owl"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-m-owl/main.png
 featured: false

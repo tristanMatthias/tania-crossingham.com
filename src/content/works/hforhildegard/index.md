@@ -1,6 +1,6 @@
 ---
 title: "H for Hildegard"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/hforhildegard/main.jpg
 featured: false

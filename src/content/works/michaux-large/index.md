@@ -1,6 +1,6 @@
 ---
 title: "The Arms of the Michaux Family"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/michaux-large/main.jpg
 featured: false

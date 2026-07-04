@@ -1,6 +1,6 @@
 ---
 title: "Conquistador — Arms of Jason Burgoin"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/conquistador-jason-burgoin/main.jpg
 featured: false

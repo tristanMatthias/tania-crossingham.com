@@ -1,6 +1,6 @@
 ---
 title: "Brenton Simons Bookplate II"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/brenton-simons-bookplate2/main.jpg
 featured: false

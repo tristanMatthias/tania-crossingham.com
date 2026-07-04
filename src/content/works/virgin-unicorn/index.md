@@ -1,6 +1,6 @@
 ---
 title: "Virgin & Unicorn"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/virgin-unicorn/main.jpg
 featured: false

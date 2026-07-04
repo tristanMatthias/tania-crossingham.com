@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Kevin Haelterman"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/kevin-haelterman/main.jpg
 featured: false

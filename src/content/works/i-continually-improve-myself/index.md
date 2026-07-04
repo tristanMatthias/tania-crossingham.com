@@ -1,6 +1,6 @@
 ---
 title: "I Continually Improve Myself"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/i-continually-improve-myself/main.jpg
 featured: false

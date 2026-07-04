@@ -1,6 +1,6 @@
 ---
 title: "Map — The Fountain of Youth"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Warner Bros"
 image: src/content/works/map-the-fountain-of-youth/main.jpg
 featured: true

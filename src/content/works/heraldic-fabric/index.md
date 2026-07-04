@@ -1,6 +1,6 @@
 ---
 title: "Heraldic Fabric Design"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/heraldic-fabric/main.png
 featured: false

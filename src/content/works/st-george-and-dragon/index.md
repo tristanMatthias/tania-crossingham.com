@@ -1,6 +1,6 @@
 ---
 title: "St George & the dragon in quatrefoil"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/st-george-and-dragon/main.jpg
 featured: false

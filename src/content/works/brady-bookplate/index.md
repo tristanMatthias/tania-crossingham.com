@@ -1,6 +1,6 @@
 ---
 title: "As Above so Below"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/brady-bookplate/main.jpg
 featured: false

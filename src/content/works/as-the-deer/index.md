@@ -1,6 +1,6 @@
 ---
 title: "As the Deer"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/as-the-deer/main.jpg
 featured: false

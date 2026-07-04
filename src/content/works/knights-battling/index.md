@@ -1,6 +1,6 @@
 ---
 title: "Knights battling"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/knights-battling/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "Renew the mind"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/renew-the-mind/main.jpg
 featured: false

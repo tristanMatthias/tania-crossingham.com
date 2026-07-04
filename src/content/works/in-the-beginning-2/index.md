@@ -1,6 +1,6 @@
 ---
 title: "In the beginning was the word"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/in-the-beginning-2/main.jpg
 featured: false

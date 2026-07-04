@@ -1,6 +1,6 @@
 ---
 title: "Zaremba Family Arms"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/monika-large/main.jpg
 featured: false

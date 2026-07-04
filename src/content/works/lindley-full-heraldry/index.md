@@ -1,6 +1,6 @@
 ---
 title: "Lindley Family Heraldry"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/lindley-full-heraldry/main.jpg
 featured: false

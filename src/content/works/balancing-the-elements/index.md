@@ -1,6 +1,6 @@
 ---
 title: "Balancing the Elements"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/balancing-the-elements/main.jpg
 featured: false

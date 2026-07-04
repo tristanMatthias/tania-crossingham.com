@@ -1,6 +1,6 @@
 ---
 title: "Sacred Space"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/sacred-space/main.jpg
 featured: false

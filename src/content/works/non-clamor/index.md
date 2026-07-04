@@ -1,6 +1,6 @@
 ---
 title: "Non Clamor"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/non-clamor/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "T — Fancy Romanesque red"
-gallery: letters
+gallery: letters.yaml
 meta: "Illuminated letter"
 image: src/content/works/letter-t-fancy-romanesque-red/main.png
 featured: false

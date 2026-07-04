@@ -1,6 +1,6 @@
 ---
 title: "Love Mandala"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Original painting"
 image: src/content/works/love-mandala/main.jpg
 featured: false

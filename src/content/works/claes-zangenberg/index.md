@@ -1,6 +1,6 @@
 ---
 title: "Georgian Letters Patent — Claes Zangenberg"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/claes-zangenberg/main.jpg
 featured: false

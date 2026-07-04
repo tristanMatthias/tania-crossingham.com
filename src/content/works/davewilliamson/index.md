@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Dave Williamson"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/davewilliamson/main.jpg
 featured: false

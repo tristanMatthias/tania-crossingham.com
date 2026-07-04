@@ -1,6 +1,6 @@
 ---
 title: "Longing"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/longing/main.jpg
 featured: false

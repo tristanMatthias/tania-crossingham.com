@@ -1,6 +1,6 @@
 ---
 title: "Masonic Arms"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/masonic-arms-larger/main.jpg
 featured: false

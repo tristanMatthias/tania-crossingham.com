@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Chris Blaxland-Walker"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/chrisblaxland-walker/main.jpg
 featured: false

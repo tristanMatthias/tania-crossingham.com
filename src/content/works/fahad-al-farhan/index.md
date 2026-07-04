@@ -1,6 +1,6 @@
 ---
 title: "Al Fahad Family Document"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/fahad-al-farhan/main.jpg
 featured: false

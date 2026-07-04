@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 /**
@@ -59,7 +59,18 @@ const works = defineCollection({
 
     return z.object({
       title: z.string(),
-      gallery: reference('galleries'),
+      /**
+       * The room this work hangs in. Pages CMS stores the gallery file name
+       * (heraldry.yaml) — normalized here to the room slug. Plain slugs and
+       * full paths are accepted too.
+       */
+      gallery: z
+        .string()
+        .transform((s) =>
+          s
+            .replace(/^\/?src\/content\/galleries\//, '')
+            .replace(/\.ya?ml$/, ''),
+        ),
       /** one-line caption, e.g. "Gouache & 23ct gold on vellum" */
       meta: z.string(),
       /** main image — shown in strips, grids and first in the work view */

@@ -1,6 +1,6 @@
 ---
 title: "Beatitudes"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/beatitudes/main.jpg
 featured: false

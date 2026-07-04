@@ -1,6 +1,6 @@
 ---
 title: "The immortal self"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/the-immortal-self/main.jpg
 featured: false

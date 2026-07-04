@@ -1,6 +1,6 @@
 ---
 title: "Thelawofone"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/thelawofone/main.jpg
 featured: false

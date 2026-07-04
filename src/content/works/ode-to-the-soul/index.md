@@ -1,6 +1,6 @@
 ---
 title: "Ode to the Soul"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/ode-to-the-soul/main.jpg
 featured: false

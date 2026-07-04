@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Emanuel Kingsley"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/kingsley-arms/main.jpg
 featured: true

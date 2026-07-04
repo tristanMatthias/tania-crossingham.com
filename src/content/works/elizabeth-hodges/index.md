@@ -1,6 +1,6 @@
 ---
 title: "Elizabeth Hodges"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/elizabeth-hodges/main.jpg
 featured: false

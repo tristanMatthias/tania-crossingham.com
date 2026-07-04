@@ -1,6 +1,6 @@
 ---
 title: "Serenity prayer"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/serenity-prayer/main.jpg
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "The Arms of Sophia Lindley"
-gallery: heraldry
+gallery: heraldry.yaml
 meta: "Heraldic commission"
 image: src/content/works/lindley-sophie/main.jpg
 featured: false

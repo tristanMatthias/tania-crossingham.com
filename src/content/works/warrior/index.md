@@ -1,6 +1,6 @@
 ---
 title: "Warrior"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/warrior/main.jpg
 featured: false

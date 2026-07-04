@@ -1,6 +1,6 @@
 ---
 title: "Return to Innocence"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/return-to-innocence/main.jpg
 featured: false

@@ -6,8 +6,8 @@ export async function getStaticPaths() {
   const galleries = await getCollection('galleries');
   const works = await getCollection('works');
   return works.map((work) => ({
-    params: { room: work.data.gallery.id, work: work.id },
-    props: { gallery: galleries.find((g) => g.id === work.data.gallery.id)!, openSlug: work.id },
+    params: { room: work.data.gallery, work: work.id },
+    props: { gallery: galleries.find((g) => g.id === work.data.gallery)!, openSlug: work.id },
   }));
 }
 

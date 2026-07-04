@@ -1,6 +1,6 @@
 ---
 title: "In the beginning"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/in-the-beginning/main.jpg
 featured: true

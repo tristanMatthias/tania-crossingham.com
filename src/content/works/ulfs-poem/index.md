@@ -1,6 +1,6 @@
 ---
 title: "Ulf's Poem"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/ulfs-poem/main.jpg
 featured: false

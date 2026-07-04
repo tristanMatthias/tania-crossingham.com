@@ -1,6 +1,6 @@
 ---
 title: "We Are One"
-gallery: contemporary
+gallery: contemporary.yaml
 meta: "Graphite on watercolour paper"
 image: src/content/works/we-are-one/main.jpg
 featured: false

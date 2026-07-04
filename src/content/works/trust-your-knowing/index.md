@@ -1,6 +1,6 @@
 ---
 title: "Trust in your knowing"
-gallery: manuscripts
+gallery: manuscripts.yaml
 meta: "Illumination"
 image: src/content/works/trust-your-knowing/main.jpg
 featured: false

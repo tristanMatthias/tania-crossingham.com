@@ -1,6 +1,6 @@
 ---
 title: "Child's Diary Page"
-gallery: commissions
+gallery: commissions.yaml
 meta: "Commission"
 image: src/content/works/childs-diary-page/main.jpg
 featured: false
