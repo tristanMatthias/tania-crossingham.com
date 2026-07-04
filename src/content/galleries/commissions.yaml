@@ -3,14 +3,14 @@ intro: "Bespoke, hand-crafted artwork created for clients worldwide — poems, v
 order: 4
 gridAspect: landscape
 works:
-  - vintage-paper-co
-  - ulfs-poem
-  - childs-diary-page
-  - hforhildegard
-  - abbey-2020-promotional-artwork
-  - rosalie-gilberts-bookcover
-  - illuminated-wedding-vows
-  - characters-for-2021-abbey-medieval-festival
-  - map-the-fountain-of-youth
-  - phillip-dennis
-  - cover-for-the-last-unicorn
+  - src/content/works/vintage-paper-co/index.md
+  - src/content/works/ulfs-poem/index.md
+  - src/content/works/childs-diary-page/index.md
+  - src/content/works/hforhildegard/index.md
+  - src/content/works/abbey-2020-promotional-artwork/index.md
+  - src/content/works/rosalie-gilberts-bookcover/index.md
+  - src/content/works/illuminated-wedding-vows/index.md
+  - src/content/works/characters-for-2021-abbey-medieval-festival/index.md
+  - src/content/works/map-the-fountain-of-youth/index.md
+  - src/content/works/phillip-dennis/index.md
+  - src/content/works/cover-for-the-last-unicorn/index.md

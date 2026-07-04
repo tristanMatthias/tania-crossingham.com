@@ -3,20 +3,20 @@ intro: "A collection of contemporary works based around the exploration of consc
 order: 3
 gridAspect: portrait
 works:
-  - luna-circuitus
-  - return-to-innocence
-  - we-are-one
-  - flow
-  - longing
-  - the-ecstasy-of-light
-  - conscious-dreaming
-  - behind-mind-mandala
-  - potential
-  - children-of-light-mandala
-  - divine-spark
-  - earth-mandala
-  - love-mandala
-  - all-is-in-the-all
-  - if-only
-  - illuminating-the-shadow-world
-  - take-the-time-to-be
+  - src/content/works/luna-circuitus/index.md
+  - src/content/works/return-to-innocence/index.md
+  - src/content/works/we-are-one/index.md
+  - src/content/works/flow/index.md
+  - src/content/works/longing/index.md
+  - src/content/works/the-ecstasy-of-light/index.md
+  - src/content/works/conscious-dreaming/index.md
+  - src/content/works/behind-mind-mandala/index.md
+  - src/content/works/potential/index.md
+  - src/content/works/children-of-light-mandala/index.md
+  - src/content/works/divine-spark/index.md
+  - src/content/works/earth-mandala/index.md
+  - src/content/works/love-mandala/index.md
+  - src/content/works/all-is-in-the-all/index.md
+  - src/content/works/if-only/index.md
+  - src/content/works/illuminating-the-shadow-world/index.md
+  - src/content/works/take-the-time-to-be/index.md
