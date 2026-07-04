@@ -1,7 +1,6 @@
 ---
 title: Contact
 intro: For commissions, workshops, collaborations or kind words — write any time.
-order: 5
 ---
 The studio is in Espoo, Finland, and works with clients worldwide.
 

@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import settings from '../content/settings.json';
 import { url } from '../lib/url';
 
@@ -8,12 +9,21 @@ interface Props {
 
 const { active } = Astro.props;
 
+/**
+ * Nav is a sitewide ordered list of page references in Site settings
+ * (drag-sortable in the CMS). Gallery is pinned first — it's a route to
+ * the rooms, not a page entry.
+ */
+const pages = await getCollection('pages');
+const slugOf = (ref: string) =>
+  ref.replace(/^\/?src\/content\/pages\//, '').replace(/\.md$/, '');
+
 const nav = [
-  { label: 'Gallery', href: url('/gallery/') },
-  { label: 'Commissions', href: url('/commissions/') },
-  { label: 'Workshops', href: url('/workshops/') },
-  { label: 'About', href: url('/about/') },
-  { label: 'Contact', href: url('/contact/') },
+  { id: 'gallery', label: 'Gallery', href: url('/gallery/') },
+  ...(settings.nav ?? [])
+    .map((ref) => pages.find((p) => p.id === slugOf(ref)))
+    .filter((p) => p != null)
+    .map((p) => ({ id: p.id, label: p.data.title, href: url(`/${p.id}/`) })),
 ];
 ---
 
@@ -25,7 +35,7 @@ const nav = [
   <nav class="label">
     {
       nav.map((item) => (
-        <a href={item.href} class:list={[{ active: active === item.label.toLowerCase() }]}>
+        <a href={item.href} class:list={[{ active: active === item.id }]}>
           {item.label}
         </a>
       ))

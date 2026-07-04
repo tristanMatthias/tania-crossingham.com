@@ -1,7 +1,6 @@
 ---
 title: About
 intro: Illuminator, calligrapher and painter working in the thousand-year tradition of the illuminated manuscript.
-order: 4
 ---
 Tania Crossingham is one of a small number of artists in the world still working in the full tradition of manuscript illumination — gouache, ink and 23-carat raised gold on vellum, using techniques unchanged since the medieval scriptoria.
 

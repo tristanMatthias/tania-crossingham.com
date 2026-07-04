@@ -8,5 +8,11 @@
     "youtube": "#",
     "patreon": "#",
     "newsletter": "#"
-  }
+  },
+  "nav": [
+    "src/content/pages/commissions.md",
+    "src/content/pages/workshops.md",
+    "src/content/pages/about.md",
+    "src/content/pages/contact.md"
+  ]
 }

@@ -1,7 +1,6 @@
 ---
 title: Workshops
 intro: Learn the living craft of manuscript illumination — in person and online through the School of Illumination.
-order: 2
 ---
 Illumination is not a lost art — it is a living one, and it can be learned. Tania teaches students of all levels the full traditional technique: preparing vellum, laying gesso, gilding with 23-carat gold leaf, and painting with gouache in the medieval manner.
 

@@ -1,7 +1,6 @@
 ---
 title: Commissions
 intro: Bespoke illuminated works — letters patent, armorial bearings, poems, vows and family heirlooms, made for clients worldwide.
-order: 1
 ---
 A commission is a collaboration. Whether it is a grant of arms, an illuminated poem, wedding vows or a gift to mark a life, each work is designed from scratch around your story — and painted entirely by hand.
 

@@ -135,8 +135,7 @@ content:
     format: yaml-frontmatter
     filename: '{fields.title}.md'
     view:
-      fields: [title, order]
-      sort: [order]
+      fields: [title]
     fields:
       - name: title
         label: Page title
@@ -146,10 +145,6 @@ content:
         label: Introduction
         description: Short line shown under the page title
         type: text
-      - name: order
-        label: Nav order
-        type: number
-        default: 99
       - name: body
         label: Content
         type: rich-text
@@ -229,6 +224,16 @@ content:
       - name: email
         label: Contact email
         type: string
+      - name: nav
+        label: Navigation
+        description: Pages in the header menu, in order (drag to reorder). Gallery is always first.
+        type: reference
+        list: true
+        options:
+          collection: pages
+          search: title
+          value: '{path}'
+          label: '{title}'
       - name: social
         label: Social links
         type: object

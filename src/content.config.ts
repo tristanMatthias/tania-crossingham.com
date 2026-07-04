@@ -104,7 +104,6 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     intro: z.string(),
-    order: z.number().default(99),
   }),
 });
 
