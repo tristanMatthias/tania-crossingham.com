@@ -22,9 +22,23 @@ const { gallery, openSlug } = Astro.props;
 const rooms = (await getCollection('galleries')).sort((a, b) => a.data.order - b.data.order);
 const nextRoom = rooms[(rooms.findIndex((r) => r.id === gallery.id) + 1) % rooms.length]!;
 
-const entries = (await getCollection('works', ({ data }) => data.gallery.id === gallery.id)).sort(
-  (a, b) => a.data.order - b.data.order,
-);
+const roomWorks = await getCollection('works', ({ data }) => data.gallery.id === gallery.id);
+
+// curated rooms show exactly the listed works, in list order;
+// rooms without a list show all their works by `order`
+const curated = gallery.data.works
+  .map((slug) => roomWorks.find((w) => w.id === slug))
+  .filter((w) => w != null);
+
+let entries = curated.length
+  ? curated
+  : [...roomWorks].sort((a, b) => a.data.order - b.data.order);
+
+// a direct link to an unlisted work still shows it (appended at the end)
+if (openSlug && !entries.some((w) => w.id === openSlug)) {
+  const extra = roomWorks.find((w) => w.id === openSlug);
+  if (extra) entries = [...entries, extra];
+}
 
 const works = entries.map((entry) => ({
   title: entry.data.title,

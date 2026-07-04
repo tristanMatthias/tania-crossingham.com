@@ -13,6 +13,22 @@ const galleries = defineCollection({
     order: z.number(),
     /** aspect of thumbnails in the "all works" grid */
     gridAspect: z.enum(['portrait', 'landscape', 'square']).default('portrait'),
+    /**
+     * Curated, ordered list of the works shown in this room (drag-sortable
+     * in the CMS). Accepts plain slugs or CMS-stored entry paths. Rooms
+     * without a list fall back to showing all their works by `order`.
+     */
+    works: z
+      .array(z.string())
+      .default([])
+      .transform((list) =>
+        list.map((s) =>
+          s
+            .replace(/^\/?src\/content\/works\//, '')
+            .replace(/\/index\.md$/, '')
+            .replace(/^\.\//, ''),
+        ),
+      ),
   }),
 });
 
