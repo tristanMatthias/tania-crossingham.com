@@ -2,12 +2,12 @@
 title: "The Grand Entrance"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/the-grand-entrance/main.jpg
 featured: false
 order: 22
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/the-grand-entrance/detail-2.jpg
+  - src/content/works/the-grand-entrance/detail-3.jpg
+  - src/content/works/the-grand-entrance/detail-4.jpg
+  - src/content/works/the-grand-entrance/detail-5.jpg
 ---

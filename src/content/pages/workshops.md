@@ -15,4 +15,4 @@ Intensive workshops are held in Finland and on occasional international tours. N
 
 > Walking in, I wasn't sure what to expect. Walking out, I was amazed and proud of what I had achieved. — a workshop student
 
-To hear about upcoming dates first, join the newsletter or get in touch via the [contact page](/contact).
+To hear about upcoming dates first, join the newsletter or get in touch via the [contact page](../contact/).

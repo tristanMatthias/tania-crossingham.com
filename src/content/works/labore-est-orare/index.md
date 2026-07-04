@@ -2,14 +2,14 @@
 title: "Labore est Orare"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/labore-est-orare/main.jpg
 featured: false
 order: 40
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/labore-est-orare/detail-2.jpg
+  - src/content/works/labore-est-orare/detail-3.jpg
+  - src/content/works/labore-est-orare/detail-4.jpg
+  - src/content/works/labore-est-orare/detail-5.jpg
 ---
 (Work is praying) This was chanted by monks in the early Medieval period. It means that if you are following your true path in life, work is a joy, not a chore.
 

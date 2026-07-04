@@ -2,16 +2,16 @@
 title: "Brady Invitation"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/brady-invitation/main.jpg
 featured: false
 order: 23
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.png
-  - ./detail-7.jpg
+  - src/content/works/brady-invitation/detail-2.jpg
+  - src/content/works/brady-invitation/detail-3.jpg
+  - src/content/works/brady-invitation/detail-4.jpg
+  - src/content/works/brady-invitation/detail-5.jpg
+  - src/content/works/brady-invitation/detail-6.png
+  - src/content/works/brady-invitation/detail-7.jpg
 ---
 A medieval style illuminated page featuring the arms of
 

@@ -11,6 +11,7 @@ import WorkStrip from './WorkStrip.astro';
 import CtaPanel from './CtaPanel.astro';
 import RoomIntro from './RoomIntro.astro';
 import WorkView from './WorkView.astro';
+import { url } from '../lib/url';
 
 interface Props {
   gallery: CollectionEntry<'galleries'>;
@@ -45,7 +46,7 @@ const works = entries.map((entry) => ({
   meta: entry.data.meta,
   image: entry.data.image,
   slug: entry.id,
-  href: `/gallery/${gallery.id}/${entry.id}/`,
+  href: url(`/gallery/${gallery.id}/${entry.id}/`),
 }));
 
 const openWork = openSlug ? entries.find((e) => e.id === openSlug) : undefined;
@@ -56,8 +57,8 @@ const title = openWork ? openWork.data.title : gallery.data.title;
   <WorkStrip
     works={works}
     gridToggle
-    primaryCta={{ label: 'Commission a work', href: '/commissions' }}
-    secondaryCta={{ label: 'Next room', href: `/gallery/${nextRoom.id}` }}
+    primaryCta={{ label: 'Commission a work', href: url('/commissions/') }}
+    secondaryCta={{ label: 'Next room', href: url(`/gallery/${nextRoom.id}/`) }}
   >
     <RoomIntro
       slot="lead"
@@ -66,7 +67,7 @@ const title = openWork ? openWork.data.title : gallery.data.title;
       title={gallery.data.title}
       intro={gallery.data.intro}
     >
-      <a class="next-room label-sm gold" href={`/gallery/${nextRoom.id}`}>
+      <a class="next-room label-sm gold" href={url(`/gallery/${nextRoom.id}/`)}>
         Next room · {nextRoom.data.title} →
       </a>
     </RoomIntro>

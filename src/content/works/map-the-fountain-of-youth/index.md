@@ -2,7 +2,7 @@
 title: "Map — The Fountain of Youth"
 gallery: commissions
 meta: "Warner Bros"
-image: ./main.jpg
+image: src/content/works/map-the-fountain-of-youth/main.jpg
 featured: true
 order: 8
 ---

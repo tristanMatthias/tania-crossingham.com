@@ -2,7 +2,7 @@
 title: "Viking"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/viking/main.jpg
 featured: false
 order: 53
 ---

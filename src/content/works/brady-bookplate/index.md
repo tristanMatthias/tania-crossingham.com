@@ -2,12 +2,12 @@
 title: "As Above so Below"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/brady-bookplate/main.jpg
 featured: false
 order: 16
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/brady-bookplate/detail-2.jpg
+  - src/content/works/brady-bookplate/detail-3.jpg
 ---
 Designed for Brady Brim-DeForest of Balvaird Castle
 

@@ -2,15 +2,15 @@
 title: "Ulf's Poem"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/ulfs-poem/main.jpg
 featured: false
 order: 2
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
-  - ./detail-8.jpg
+  - src/content/works/ulfs-poem/detail-2.jpg
+  - src/content/works/ulfs-poem/detail-3.jpg
+  - src/content/works/ulfs-poem/detail-4.jpg
+  - src/content/works/ulfs-poem/detail-5.jpg
+  - src/content/works/ulfs-poem/detail-6.jpg
+  - src/content/works/ulfs-poem/detail-7.jpg
+  - src/content/works/ulfs-poem/detail-8.jpg
 ---

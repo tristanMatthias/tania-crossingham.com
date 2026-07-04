@@ -1,5 +1,6 @@
 ---
 import settings from '../content/settings.json';
+import { url } from '../lib/url';
 
 interface Props {
   active?: string;
@@ -8,16 +9,16 @@ interface Props {
 const { active } = Astro.props;
 
 const nav = [
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Commissions', href: '/commissions' },
-  { label: 'Workshops', href: '/workshops' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Gallery', href: url('/gallery/') },
+  { label: 'Commissions', href: url('/commissions/') },
+  { label: 'Workshops', href: url('/workshops/') },
+  { label: 'About', href: url('/about/') },
+  { label: 'Contact', href: url('/contact/') },
 ];
 ---
 
 <header>
-  <a class="wordmark" href="/">
+  <a class="wordmark" href={url('/')}>
     <span class="name">{settings.siteName}</span>
     <span class="credentials label-sm muted">{settings.credentials}</span>
   </a>

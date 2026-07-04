@@ -2,12 +2,12 @@
 title: "I love you"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/i-love-you/main.jpg
 featured: false
 order: 29
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/i-love-you/detail-2.jpg
+  - src/content/works/i-love-you/detail-3.jpg
 ---
 This image is based on designs from France in the early fifteenth century. This style of illumination is International Gothic.
 

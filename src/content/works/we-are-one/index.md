@@ -2,14 +2,14 @@
 title: "We Are One"
 gallery: contemporary
 meta: "Graphite on watercolour paper"
-image: ./main.jpg
+image: src/content/works/we-are-one/main.jpg
 featured: false
 order: 3
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/we-are-one/detail-2.jpg
+  - src/content/works/we-are-one/detail-3.jpg
+  - src/content/works/we-are-one/detail-4.jpg
+  - src/content/works/we-are-one/detail-5.jpg
 ---
 > "Modern science speaks to us of an extraordinary range of interrelations. Ecologists know that a tree burning in the Amazon rainforest, alters in some way the air breathed by a citizen of Paris, and that the trembling of a butterfly's wings in Yucatan affects the life of a fern in the Hebrides."
 > — Sogyal Rinpoche, *The Tibetan Book of Living and Dying*

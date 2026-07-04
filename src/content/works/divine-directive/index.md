@@ -2,12 +2,12 @@
 title: "Divine directive"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/divine-directive/main.jpg
 featured: false
 order: 7
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/divine-directive/detail-2.jpg
+  - src/content/works/divine-directive/detail-3.jpg
 ---
 At the core of our being, embedded into our DNA is our divine directive; the compelling force that drives us to be more of who we are and live the divine plan that we have dreamed since the dawn of time. This is the force that has inspired humanity’s finest moments, and initiated the millions of individual triumphs that shine forth each day, flickering across the globe in a shimmering display of divine diversity.
 

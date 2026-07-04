@@ -2,14 +2,14 @@
 title: "Potential"
 gallery: contemporary
 meta: "Gouache on marbled pastel paper"
-image: ./main.jpg
+image: src/content/works/potential/main.jpg
 featured: false
 order: 8
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/potential/detail-2.jpg
+  - src/content/works/potential/detail-3.jpg
+  - src/content/works/potential/detail-4.jpg
+  - src/content/works/potential/detail-5.jpg
 ---
 > "Born of the primordial genesis, the potential gestates across aeons of time. Suspended in the void of endless possibilities and guarded patiently by Spirit, it waits for the perfect moment to emerge into reality and begin its cycle of life."
 

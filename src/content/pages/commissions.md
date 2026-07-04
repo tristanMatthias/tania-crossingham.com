@@ -25,4 +25,4 @@ The finished work is shipped worldwide, ready for framing — an heirloom made t
 
 ## Begin
 
-Send a note describing what you have in mind via the [contact page](/contact). There is no obligation — every commission starts with a conversation.
+Send a note describing what you have in mind via the [contact page](../contact/). There is no obligation — every commission starts with a conversation.

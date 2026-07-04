@@ -2,11 +2,11 @@
 title: "Rheinbergen Wedding Certificate"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/rheinbergenweddingcertificate/main.jpg
 featured: false
 order: 13
 images:
-  - ./detail-2.png
-  - ./detail-3.jpg
-  - ./detail-4.jpg
+  - src/content/works/rheinbergenweddingcertificate/detail-2.png
+  - src/content/works/rheinbergenweddingcertificate/detail-3.jpg
+  - src/content/works/rheinbergenweddingcertificate/detail-4.jpg
 ---

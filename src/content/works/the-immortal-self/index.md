@@ -2,14 +2,14 @@
 title: "The immortal self"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/the-immortal-self/main.jpg
 featured: false
 order: 13
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/the-immortal-self/detail-2.jpg
+  - src/content/works/the-immortal-self/detail-3.jpg
+  - src/content/works/the-immortal-self/detail-4.jpg
+  - src/content/works/the-immortal-self/detail-5.jpg
 ---
 The great veiled Being of our immortal self awaits us beyond the energy of our Soul. Our I AM Presence dreams our Divine Plan, whispering it through the Soul into our human minds when we sit in silence with an open heart. In this space, we move beyond the chatter and the drama of the mundane into a serene communion with our divinity. This is a place beyond time, space and words; where love, peace and acceptance create a balance that reigns supreme.
 

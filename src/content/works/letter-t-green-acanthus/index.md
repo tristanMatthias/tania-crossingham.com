@@ -2,7 +2,7 @@
 title: "T — Green acanthus"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.jpg
+image: src/content/works/letter-t-green-acanthus/main.jpg
 featured: false
 order: 57
 ---

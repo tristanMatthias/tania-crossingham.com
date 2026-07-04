@@ -2,12 +2,12 @@
 title: "Illuminating the Shadow World"
 gallery: contemporary
 meta: "Original painting"
-image: ./main.jpg
+image: src/content/works/illuminating-the-shadow-world/main.jpg
 featured: false
 order: 16
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/illuminating-the-shadow-world/detail-2.jpg
+  - src/content/works/illuminating-the-shadow-world/detail-3.jpg
 ---
 We are also dual beings and have within us shadow and light that play out in all our daily activities and interactions. To deny the shadow within us, is to not accept who we are. The shadow is not evil, but simply a part of us that has not yet been transmuted into Light. Shadows can be a repressed memory or experience but they can also be an unrealized potential within, that is waiting to be embraced.
 

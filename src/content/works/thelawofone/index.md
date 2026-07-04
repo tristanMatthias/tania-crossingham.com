@@ -2,14 +2,14 @@
 title: "Thelawofone"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/thelawofone/main.jpg
 featured: false
 order: 59
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/thelawofone/detail-2.jpg
+  - src/content/works/thelawofone/detail-3.jpg
+  - src/content/works/thelawofone/detail-4.jpg
+  - src/content/works/thelawofone/detail-5.jpg
 ---
 The Law of One is the primary universal mandate binding all life together. We are all emanations of the Divine experiencing life and expressing our diversity in a myriad of ways. Humankind has reached the decisive point in its history where drastic change can no longer be avoided. Evolution requires us to move forward together in the spirit of community, co-operation and respect for all life.
 

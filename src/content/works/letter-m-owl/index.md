@@ -2,7 +2,7 @@
 title: "M — Owl"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.png
+image: src/content/works/letter-m-owl/main.png
 featured: false
 order: 52
 ---

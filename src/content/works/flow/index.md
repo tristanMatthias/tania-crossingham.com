@@ -2,14 +2,14 @@
 title: "Flow"
 gallery: contemporary
 meta: "Graphite on watercolour paper"
-image: ./main.jpg
+image: src/content/works/flow/main.jpg
 featured: false
 order: 4
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/flow/detail-2.jpg
+  - src/content/works/flow/detail-3.jpg
+  - src/content/works/flow/detail-4.jpg
+  - src/content/works/flow/detail-5.jpg
 ---
 I created this piece when I was learning to 'flow' with universal energy rather than fight it. Made life so beautiful and much easier. I felt that I was lifted up and carried gently along. Letting go and surrendering to this force was so easy… like an enormous weight was taken from me and I felt light and so alive.
 

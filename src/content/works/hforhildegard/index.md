@@ -2,13 +2,13 @@
 title: "H for Hildegard"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/hforhildegard/main.jpg
 featured: false
 order: 4
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
+  - src/content/works/hforhildegard/detail-2.jpg
+  - src/content/works/hforhildegard/detail-3.jpg
+  - src/content/works/hforhildegard/detail-4.jpg
 ---
 Artwork created for the front cover of Australian author,
 

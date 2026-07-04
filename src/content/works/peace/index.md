@@ -2,7 +2,7 @@
 title: "Peace"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/peace/main.jpg
 featured: false
 order: 16
 ---

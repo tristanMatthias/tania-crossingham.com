@@ -2,14 +2,14 @@
 title: "As Above so Below"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/congress-logo/main.jpg
 featured: false
 order: 24
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.png
+  - src/content/works/congress-logo/detail-2.jpg
+  - src/content/works/congress-logo/detail-3.jpg
+  - src/content/works/congress-logo/detail-4.jpg
+  - src/content/works/congress-logo/detail-5.png
 ---
 Logo Design
 

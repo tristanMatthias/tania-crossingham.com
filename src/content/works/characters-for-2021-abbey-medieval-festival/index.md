@@ -2,20 +2,20 @@
 title: "Characters — Abbey Medieval Festival 2021"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/characters-for-2021-abbey-medieval-festival/main.jpg
 featured: false
 order: 8
 images:
-  - ./detail-2.jpg
-  - ./detail-3.png
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
-  - ./detail-8.jpg
-  - ./detail-9.jpg
-  - ./detail-10.jpg
-  - ./detail-11.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-2.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-3.png
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-4.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-5.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-6.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-7.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-8.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-9.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-10.jpg
+  - src/content/works/characters-for-2021-abbey-medieval-festival/detail-11.jpg
 ---
 A series of medieval characters created for the
 

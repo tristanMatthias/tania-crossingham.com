@@ -2,7 +2,7 @@
 title: "Viking woman"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/viking-woman/main.jpg
 featured: false
 order: 54
 ---

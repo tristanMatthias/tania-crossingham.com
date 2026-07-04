@@ -2,7 +2,7 @@
 title: "T — Arnstein"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.png
+image: src/content/works/letter-t-arnstein/main.png
 featured: false
 order: 64
 ---

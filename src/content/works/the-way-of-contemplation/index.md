@@ -2,12 +2,12 @@
 title: "The way of contemplation"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/the-way-of-contemplation/main.jpg
 featured: false
 order: 36
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/the-way-of-contemplation/detail-2.jpg
+  - src/content/works/the-way-of-contemplation/detail-3.jpg
 ---
 This is the path of self-reflection, devotion to one’s divine purpose and balance between all aspects of existence. This translates to a modest life of simplicity, humility and peace that is not a diminishing of self, but a shedding of all that is extraneous, so that the essence of our being may radiate from within.
 

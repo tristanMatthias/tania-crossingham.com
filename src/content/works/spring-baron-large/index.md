@@ -2,9 +2,9 @@
 title: "Spring Baron"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/spring-baron-large/main.jpg
 featured: false
 order: 4
 images:
-  - ./detail-2.jpg
+  - src/content/works/spring-baron-large/detail-2.jpg
 ---

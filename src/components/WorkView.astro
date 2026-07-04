@@ -14,6 +14,7 @@
 import { render } from 'astro:content';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { url } from '../lib/url';
 
 interface Props {
   room: string;
@@ -39,6 +40,7 @@ const slugs = works.map((w) => w.id);
   class="work-view"
   data-work-view
   data-room={room}
+  data-room-url={url(`/gallery/${room}/`)}
   data-slugs={JSON.stringify(slugs)}
   hidden={!open}
   role="dialog"
@@ -53,7 +55,7 @@ const slugs = works.map((w) => w.id);
       open && (
         <>
           <figure class="wv-figure">
-            <Image src={open.work.data.image} alt={open.work.data.title} width={2000} />
+            <Image src={open.work.data.image} alt={open.work.data.title} width={2000} loading="eager" />
           </figure>
           <section class="wv-details">
             <div class="wv-diamond">◆</div>
@@ -66,7 +68,7 @@ const slugs = works.map((w) => w.id);
             )}
             {open.work.data.images.map((src) => (
               <figure class="wv-detail-figure">
-                <Image src={src} alt={`${open.work.data.title} — detail`} width={1200} loading="lazy" />
+                <Image src={src} alt={`${open.work.data.title} — detail`} width={1200} loading="eager" />
               </figure>
             ))}
           </section>
@@ -81,7 +83,7 @@ const slugs = works.map((w) => w.id);
   rendered.map(({ work, Content, hasDetails }) => (
     <template data-work-tpl={work.id}>
       <figure class="wv-figure">
-        <Image src={work.data.image} alt={work.data.title} width={2000} loading="lazy" />
+        <Image src={work.data.image} alt={work.data.title} width={2000} loading="eager" />
       </figure>
       <section class="wv-details">
         <div class="wv-diamond">◆</div>
@@ -94,7 +96,7 @@ const slugs = works.map((w) => w.id);
         )}
         {work.data.images.map((src) => (
           <figure class="wv-detail-figure">
-            <Image src={src} alt={`${work.data.title} — detail`} width={1200} loading="lazy" />
+            <Image src={src} alt={`${work.data.title} — detail`} width={1200} loading="eager" />
           </figure>
         ))}
       </section>
@@ -218,14 +220,18 @@ const slugs = works.map((w) => w.id);
   const view = document.querySelector<HTMLElement>('[data-work-view]');
 
   if (view) {
-    const room = view.dataset.room!;
     const slugs: string[] = JSON.parse(view.dataset.slugs || '[]');
     const content = view.querySelector<HTMLElement>('[data-wv-content]')!;
-    const roomUrl = `/gallery/${room}/`;
+    const roomUrl = view.dataset.roomUrl!;
 
     if (slugs.length < 2) view.setAttribute('data-single', '');
 
-    let current: string | null = view.hidden ? null : location.pathname.split('/')[3] || null;
+    const slugFromLocation = () =>
+      location.pathname.startsWith(roomUrl)
+        ? location.pathname.slice(roomUrl.length).split('/')[0] || null
+        : null;
+
+    let current: string | null = view.hidden ? null : slugFromLocation();
     // true when the gallery page is beneath us in history, so close = back()
     let openedByPush = false;
 
@@ -292,8 +298,7 @@ const slugs = works.map((w) => w.id);
 
     // browser back/forward: sync the overlay to the URL
     window.addEventListener('popstate', () => {
-      const parts = location.pathname.split('/').filter(Boolean); // [gallery, room, slug?]
-      const slug = parts[2];
+      const slug = slugFromLocation();
       if (slug && slugs.includes(slug)) {
         show(slug);
       } else {

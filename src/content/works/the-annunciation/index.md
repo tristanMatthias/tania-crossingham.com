@@ -2,12 +2,12 @@
 title: "The Annunciation"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/the-annunciation/main.jpg
 featured: false
 order: 26
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/the-annunciation/detail-2.jpg
+  - src/content/works/the-annunciation/detail-3.jpg
 ---
 Image inspired by Flemish manuscripts from the fifteenth century.
 

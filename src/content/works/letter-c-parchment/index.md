@@ -2,7 +2,7 @@
 title: "C — Parchment"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.jpg
+image: src/content/works/letter-c-parchment/main.jpg
 featured: false
 order: 83
 ---

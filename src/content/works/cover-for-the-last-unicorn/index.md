@@ -2,14 +2,14 @@
 title: "Cover for The Last Unicorn"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/cover-for-the-last-unicorn/main.jpg
 featured: false
 order: 10
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/cover-for-the-last-unicorn/detail-2.jpg
+  - src/content/works/cover-for-the-last-unicorn/detail-3.jpg
+  - src/content/works/cover-for-the-last-unicorn/detail-4.jpg
+  - src/content/works/cover-for-the-last-unicorn/detail-5.jpg
 ---
 THE LAST UNICORN - by Peter Beagle
 

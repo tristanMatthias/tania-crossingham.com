@@ -2,7 +2,7 @@
 title: "All Is in the All"
 gallery: contemporary
 meta: "Original painting"
-image: ./main.png
+image: src/content/works/all-is-in-the-all/main.png
 featured: false
 order: 13
 ---

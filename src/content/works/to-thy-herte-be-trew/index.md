@@ -2,14 +2,14 @@
 title: "To Thy Herte Be Trew"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/to-thy-herte-be-trew/main.jpg
 featured: false
 order: 44
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/to-thy-herte-be-trew/detail-2.jpg
+  - src/content/works/to-thy-herte-be-trew/detail-3.jpg
+  - src/content/works/to-thy-herte-be-trew/detail-4.jpg
+  - src/content/works/to-thy-herte-be-trew/detail-5.jpg
 ---
 Written and painted for Simon, the love of my life.
 

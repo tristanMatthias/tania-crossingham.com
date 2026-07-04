@@ -2,20 +2,20 @@
 title: "Heraldic Fabric Design"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.png
+image: src/content/works/heraldic-fabric/main.png
 featured: false
 order: 30
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.png
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
-  - ./detail-8.jpg
-  - ./detail-9.jpg
-  - ./detail-10.jpg
-  - ./detail-11.jpg
+  - src/content/works/heraldic-fabric/detail-2.jpg
+  - src/content/works/heraldic-fabric/detail-3.jpg
+  - src/content/works/heraldic-fabric/detail-4.png
+  - src/content/works/heraldic-fabric/detail-5.jpg
+  - src/content/works/heraldic-fabric/detail-6.jpg
+  - src/content/works/heraldic-fabric/detail-7.jpg
+  - src/content/works/heraldic-fabric/detail-8.jpg
+  - src/content/works/heraldic-fabric/detail-9.jpg
+  - src/content/works/heraldic-fabric/detail-10.jpg
+  - src/content/works/heraldic-fabric/detail-11.jpg
 ---
 Imagine your own heraldry printed onto beautiful fabrics for use in your home.
 

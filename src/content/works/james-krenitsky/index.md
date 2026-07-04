@@ -2,10 +2,10 @@
 title: "The Arms of James Krenitsky"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/james-krenitsky/main.jpg
 featured: false
 order: 33
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/james-krenitsky/detail-2.jpg
+  - src/content/works/james-krenitsky/detail-3.jpg
 ---

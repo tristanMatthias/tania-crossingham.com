@@ -2,7 +2,7 @@
 title: "Celtic Bard"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/celtic-bard/main.jpg
 featured: false
 order: 52
 ---

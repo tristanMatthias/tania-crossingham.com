@@ -2,14 +2,14 @@
 title: "As Above so Below"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/know-thyself/main.jpg
 featured: false
 order: 58
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/know-thyself/detail-2.jpg
+  - src/content/works/know-thyself/detail-3.jpg
+  - src/content/works/know-thyself/detail-4.jpg
+  - src/content/works/know-thyself/detail-5.jpg
 ---
 Carved into the temple of Apollo in Delphi and the axiom of every mystery school in existence is the principle, "Know Thyself and thou shalt know the universe and God." Walk the Royal Road of the Alchemists leading to the Self and embark upon the greatest adventure of your life. This has as much relevance today as it has throughout human history.
 

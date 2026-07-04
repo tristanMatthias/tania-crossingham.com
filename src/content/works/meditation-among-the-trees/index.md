@@ -2,11 +2,11 @@
 title: "Meditation among the trees"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/meditation-among-the-trees/main.jpg
 featured: false
 order: 33
 images:
-  - ./detail-2.jpg
+  - src/content/works/meditation-among-the-trees/detail-2.jpg
 ---
 Both the powerful and subtle forces of nature offer a wealth of knowledge to those who can take time out from their lives to just connect with them. The whispers on the wind and the murmurings of the elementals impart their secrets and invite us to share their wisdom. The earth mother is a great teacher to those who are willing to listen with an open heart and mind.
 

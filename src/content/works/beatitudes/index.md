@@ -2,7 +2,7 @@
 title: "Beatitudes"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/beatitudes/main.jpg
 featured: false
 order: 31
 ---

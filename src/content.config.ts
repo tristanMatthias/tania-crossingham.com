@@ -45,20 +45,32 @@ const works = defineCollection({
     base: './src/content/works',
     generateId: ({ entry }) => entry.replace('/index.md', ''),
   }),
-  schema: ({ image }) =>
-    z.object({
+  schema: ({ image }) => {
+    /**
+     * Image values are stored in the CMS-canonical form
+     * (src/content/works/<slug>/main.jpg — Pages CMS validates them against
+     * its media root). The file always lives in the entry's own folder, so
+     * normalizing to ./<basename> resolves it for astro:assets.
+     */
+    const workImage = z.preprocess(
+      (v) => (typeof v === 'string' && !v.startsWith('./') ? `./${v.split('/').pop()}` : v),
+      image(),
+    );
+
+    return z.object({
       title: z.string(),
       gallery: reference('galleries'),
       /** one-line caption, e.g. "Gouache & 23ct gold on vellum" */
       meta: z.string(),
       /** main image — shown in strips, grids and first in the work view */
-      image: image(),
+      image: workImage,
       /** additional images (details, closeups) shown in the work view */
-      images: z.array(image()).default([]),
+      images: z.array(workImage).default([]),
       /** show in the homepage strip */
       featured: z.boolean().default(false),
       order: z.number().default(99),
-    }),
+    });
+  },
 });
 
 const testimonials = defineCollection({

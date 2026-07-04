@@ -2,12 +2,12 @@
 title: "Serenity prayer"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/serenity-prayer/main.jpg
 featured: false
 order: 18
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/serenity-prayer/detail-2.jpg
+  - src/content/works/serenity-prayer/detail-3.jpg
 ---
 This quote is about understanding the difference between acceptance of a situation and using your will to create change. For many years I struggled to understand how these two apparently opposing principles could work together and I was terrified of “getting it wrong”. Now I understand that when you connect to your higher self, and align your will with divine will, using discernment, you can create powerful change when it is needed on your path. Other situations do not need your interference, and it is your place to accept them.
 

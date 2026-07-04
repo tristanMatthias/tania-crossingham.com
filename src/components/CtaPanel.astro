@@ -1,5 +1,6 @@
 ---
 import homepage from '../content/homepage.json';
+import { url } from '../lib/url';
 
 interface Props {
   /** 'strip' renders as a fixed-width panel inside a work strip */
@@ -13,7 +14,7 @@ const { variant = 'strip' } = Astro.props;
   <div class="diamond">◆</div>
   <div class="heading">{homepage.ctaHeading}</div>
   <div class="body muted">{homepage.ctaBody}</div>
-  <a class="btn btn--gold" href="/commissions">{homepage.ctaButton}</a>
+  <a class="btn btn--gold" href={url('/commissions/')}>{homepage.ctaButton}</a>
 </div>
 
 <style>

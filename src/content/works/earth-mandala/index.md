@@ -2,14 +2,14 @@
 title: "Earth Mandala"
 gallery: contemporary
 meta: "Original painting"
-image: ./main.jpg
+image: src/content/works/earth-mandala/main.jpg
 featured: false
 order: 11
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/earth-mandala/detail-2.jpg
+  - src/content/works/earth-mandala/detail-3.jpg
+  - src/content/works/earth-mandala/detail-4.jpg
+  - src/content/works/earth-mandala/detail-5.jpg
 ---
 Earth is a jewel of the universe. Her myriad of life in all its dimensions, a testament to Divine Creativity.
 

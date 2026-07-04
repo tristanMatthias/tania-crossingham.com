@@ -2,7 +2,7 @@
 title: "Order of St George the Martyr"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/order-of-st-george-the-martyr/main.jpg
 featured: false
 order: 25
 ---

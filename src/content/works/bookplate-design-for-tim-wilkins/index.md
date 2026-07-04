@@ -2,12 +2,12 @@
 title: "Bookplate for Tim Wilkins"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/bookplate-design-for-tim-wilkins/main.jpg
 featured: false
 order: 15
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/bookplate-design-for-tim-wilkins/detail-2.jpg
+  - src/content/works/bookplate-design-for-tim-wilkins/detail-3.jpg
 ---
 Designed for Tim Wilkins
 

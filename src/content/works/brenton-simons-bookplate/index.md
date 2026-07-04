@@ -2,17 +2,17 @@
 title: "Brenton Simons Bookplate"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/brenton-simons-bookplate/main.jpg
 featured: false
 order: 19
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
-  - ./detail-8.jpg
-  - ./detail-9.jpg
+  - src/content/works/brenton-simons-bookplate/detail-2.jpg
+  - src/content/works/brenton-simons-bookplate/detail-3.jpg
+  - src/content/works/brenton-simons-bookplate/detail-4.jpg
+  - src/content/works/brenton-simons-bookplate/detail-5.jpg
+  - src/content/works/brenton-simons-bookplate/detail-6.jpg
+  - src/content/works/brenton-simons-bookplate/detail-7.jpg
+  - src/content/works/brenton-simons-bookplate/detail-8.jpg
+  - src/content/works/brenton-simons-bookplate/detail-9.jpg
 ---
 Bookplate featuring the arms of Mr Brenton Simons

@@ -2,14 +2,14 @@
 title: "Gothic Banquet"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/gothic-banquet/main.jpg
 featured: false
 order: 4
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/gothic-banquet/detail-2.jpg
+  - src/content/works/gothic-banquet/detail-3.jpg
+  - src/content/works/gothic-banquet/detail-4.jpg
+  - src/content/works/gothic-banquet/detail-5.jpg
 ---
 The true nature of a spiritual path is one of joy and fun. While it is important to celebrate the milestones in life like birthdays and weddings, it is also equally important to reflect back on our life and observe how far we have travelled. Sometimes we forget to take the time to celebrate how much we have grown and learned as we have passed through the trials of life. Congratulate yourself, celebrate the wisdom you have gained, and smile at all the times you took yourself way too seriously.
 

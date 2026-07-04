@@ -2,12 +2,12 @@
 title: "Fairytale characters"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/fairytale-characters/main.jpg
 featured: false
 order: 51
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/fairytale-characters/detail-2.jpg
+  - src/content/works/fairytale-characters/detail-3.jpg
 ---
 Colourful characters from medieval fairytales
 

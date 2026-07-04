@@ -2,14 +2,14 @@
 title: "Arthurian Gothic Revival Design"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/arthurian-gothic-revival-design/main.jpg
 featured: false
 order: 37
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-2.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-3.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-4.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-5.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-6.jpg
+  - src/content/works/arthurian-gothic-revival-design/detail-7.jpg
 ---

@@ -2,13 +2,13 @@
 title: "Non Clamor"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/non-clamor/main.jpg
 featured: false
 order: 47
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
+  - src/content/works/non-clamor/detail-2.jpg
+  - src/content/works/non-clamor/detail-3.jpg
+  - src/content/works/non-clamor/detail-4.jpg
 ---
 Order this print
 

@@ -2,12 +2,12 @@
 title: "Love"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/love/main.jpg
 featured: false
 order: 19
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/love/detail-2.jpg
+  - src/content/works/love/detail-3.jpg
 ---
 Love is the most powerful of all forces. It is the glue that holds the very fabric of the universe together and the uniting principle between all creation. As emanations from the Divine, this love is at the heart of each of us. I am not speaking of the sappy and marketable commodity that humanity has created under the label of “Love”, but the guiding force that allows us to move beyond our humanity and touch our divinity. It is the ability to see that same divinity within all others and treat everyone with respect, compassion and dignity, knowing that we are all part of each other.
 

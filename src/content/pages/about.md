@@ -23,4 +23,4 @@ Tania teaches the techniques of illumination to students around the world throug
 
 ## Kind words
 
-What clients, collectors and students say about working with Tania — [read their words](/kind-words).
+What clients, collectors and students say about working with Tania — [read their words](../kind-words/).

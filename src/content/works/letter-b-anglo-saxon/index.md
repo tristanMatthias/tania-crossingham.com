@@ -2,7 +2,7 @@
 title: "B — Anglo-Saxon"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.png
+image: src/content/works/letter-b-anglo-saxon/main.png
 featured: false
 order: 3
 ---

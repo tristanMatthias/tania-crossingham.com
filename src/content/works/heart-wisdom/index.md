@@ -2,13 +2,13 @@
 title: "Heart Wisdom"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/heart-wisdom/main.jpg
 featured: false
 order: 20
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
+  - src/content/works/heart-wisdom/detail-2.jpg
+  - src/content/works/heart-wisdom/detail-3.jpg
+  - src/content/works/heart-wisdom/detail-4.jpg
 ---
 The heart carries its own intelligence – one of a higher calibre than the mind. It invites you quietly and gently to enter within its chamber. Here awaits your Soul, which has the acquired wisdom of many lifetimes. As you part the veils to reveal this hidden aspect of yourself, you may catch a glimpse of your Inner Master that awaits beyond the doorway of the Soul. This is what you have longed for without even recognizing the desire. This Master is your highest and purest state of being, and all of life’s journey is designed to take you there.
 

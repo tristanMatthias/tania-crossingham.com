@@ -2,7 +2,7 @@
 title: "C — Large Romanesque"
 gallery: letters
 meta: "Illuminated letter"
-image: ./main.png
+image: src/content/works/letter-c-large-romanesque/main.png
 featured: false
 order: 84
 ---

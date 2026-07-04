@@ -2,10 +2,10 @@
 title: "The Noctes Atticae of Aulus Gallius"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/the-noctes-atticae-of-aulus-gallius/main.jpg
 featured: false
 order: 39
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/the-noctes-atticae-of-aulus-gallius/detail-2.jpg
+  - src/content/works/the-noctes-atticae-of-aulus-gallius/detail-3.jpg
 ---

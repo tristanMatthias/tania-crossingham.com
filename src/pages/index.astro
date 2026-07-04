@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import WorkStrip from '../components/WorkStrip.astro';
 import CtaPanel from '../components/CtaPanel.astro';
 import homepage from '../content/homepage.json';
+import { url } from '../lib/url';
 
 // strip order: by room, then by the work's order within its room
 const galleries = await getCollection('galleries');
@@ -20,7 +21,7 @@ const works = featured.map((entry) => ({
   title: entry.data.title,
   meta: entry.data.meta,
   image: entry.data.image,
-  href: `/gallery/${entry.data.gallery.id}/${entry.id}/`,
+  href: url(`/gallery/${entry.data.gallery.id}/${entry.id}/`),
 }));
 ---
 
@@ -28,14 +29,14 @@ const works = featured.map((entry) => ({
   <WorkStrip
     works={works}
     midAfter={3}
-    primaryCta={{ label: 'Commission a work', href: '/commissions' }}
-    secondaryCta={{ label: 'View galleries', href: '/gallery' }}
+    primaryCta={{ label: 'Commission a work', href: url('/commissions/') }}
+    secondaryCta={{ label: 'View galleries', href: url('/gallery/') }}
   >
     <div class="quote-card" slot="mid">
       <div class="diamonds gold">◆ ◆ ◆</div>
       <div class="quote-heading">{homepage.quoteHeading}</div>
       <div class="quote-body muted">{homepage.quoteBody}</div>
-      <a class="btn btn--link label" href="/commissions">{homepage.ctaButton} →</a>
+      <a class="btn btn--link label" href={url('/commissions/')}>{homepage.ctaButton} →</a>
     </div>
     <CtaPanel slot="end" variant="strip" />
   </WorkStrip>

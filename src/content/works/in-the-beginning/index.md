@@ -2,13 +2,13 @@
 title: "In the beginning"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/in-the-beginning/main.jpg
 featured: true
 order: 24
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
+  - src/content/works/in-the-beginning/detail-2.jpg
+  - src/content/works/in-the-beginning/detail-3.jpg
+  - src/content/works/in-the-beginning/detail-4.jpg
 ---
 This is one of my favorite verses in the Bible. It is esoteric and powerful, interpreted by many people in many ways. Allow it to settle within and speak to your heart.
 

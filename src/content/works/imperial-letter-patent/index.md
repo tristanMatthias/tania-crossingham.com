@@ -2,9 +2,9 @@
 title: "Imperial Letter Patent"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/imperial-letter-patent/main.jpg
 featured: true
 order: 7
 images:
-  - ./detail-2.jpg
+  - src/content/works/imperial-letter-patent/detail-2.jpg
 ---

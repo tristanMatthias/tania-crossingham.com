@@ -2,14 +2,14 @@
 title: "Child's Diary Page"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/childs-diary-page/main.jpg
 featured: false
 order: 3
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
-  - ./detail-6.jpg
-  - ./detail-7.jpg
+  - src/content/works/childs-diary-page/detail-2.jpg
+  - src/content/works/childs-diary-page/detail-3.jpg
+  - src/content/works/childs-diary-page/detail-4.jpg
+  - src/content/works/childs-diary-page/detail-5.jpg
+  - src/content/works/childs-diary-page/detail-6.jpg
+  - src/content/works/childs-diary-page/detail-7.jpg
 ---

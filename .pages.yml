@@ -6,9 +6,10 @@
 # the templates, or the design.
 #
 # Works are folder-per-entry (src/content/works/<slug>/index.md) with images
-# co-located. Image fields are modeled as plain text paths (./main.jpg) so
-# the CMS passes them through untouched — swap artwork images via git or the
-# media browser, not these fields.
+# co-located. Image fields store CMS-canonical paths
+# (src/content/works/<slug>/main.jpg); the Astro schema normalizes them to
+# entry-relative paths for astro:assets. Keep a work's images in its own
+# folder — picking a file from another folder will fail the site build.
 
 # Artwork images live inside each work's folder (src/content/works/<slug>/).
 # The media browser navigates those folders; upload a work's images into its
@@ -52,15 +53,19 @@ content:
         description: One line shown under the title, e.g. "Gouache & 23ct gold on vellum"
         type: string
       - name: image
-        label: Image (path)
-        description: Main image, relative to the work's folder — e.g. ./main.jpg
-        type: string
+        label: Image
+        description: The main image — pick it from (or upload it into) this work's folder
+        type: image
         required: true
+        options:
+          media: artwork
       - name: images
-        label: More images (paths)
-        description: Optional details and closeups, relative paths — e.g. ./detail-2.jpg
-        type: string
+        label: More images
+        description: Optional details and closeups, shown when a visitor opens the work
+        type: image
         list: true
+        options:
+          media: artwork
       - name: featured
         label: Feature on homepage
         description: Featured works appear in the strip on the front page

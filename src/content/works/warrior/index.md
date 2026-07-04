@@ -2,7 +2,7 @@
 title: "Warrior"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/warrior/main.jpg
 featured: false
 order: 55
 ---

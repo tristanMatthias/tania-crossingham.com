@@ -2,12 +2,12 @@
 title: "Baudelaire Fantasy Heraldry"
 gallery: heraldry
 meta: "Heraldic commission"
-image: ./main.jpg
+image: src/content/works/baudelaire/main.jpg
 featured: false
 order: 38
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
-  - ./detail-4.jpg
-  - ./detail-5.jpg
+  - src/content/works/baudelaire/detail-2.jpg
+  - src/content/works/baudelaire/detail-3.jpg
+  - src/content/works/baudelaire/detail-4.jpg
+  - src/content/works/baudelaire/detail-5.jpg
 ---

@@ -2,12 +2,12 @@
 title: "In the beginning was the word"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/in-the-beginning-2/main.jpg
 featured: false
 order: 42
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/in-the-beginning-2/detail-2.jpg
+  - src/content/works/in-the-beginning-2/detail-3.jpg
 ---
 This is another version of this esoteric and powerful verse, interpreted by many people in many ways. Allow it to settle within and speak to your heart.
 

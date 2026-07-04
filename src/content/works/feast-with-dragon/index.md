@@ -2,12 +2,12 @@
 title: "Feast with dragon"
 gallery: manuscripts
 meta: "Illumination"
-image: ./main.jpg
+image: src/content/works/feast-with-dragon/main.jpg
 featured: false
 order: 21
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/feast-with-dragon/detail-2.jpg
+  - src/content/works/feast-with-dragon/detail-3.jpg
 ---
 Square
 

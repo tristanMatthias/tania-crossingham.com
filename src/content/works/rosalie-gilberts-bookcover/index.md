@@ -2,12 +2,12 @@
 title: "Rosalie Gilbert's Book Cover"
 gallery: commissions
 meta: "Commission"
-image: ./main.jpg
+image: src/content/works/rosalie-gilberts-bookcover/main.jpg
 featured: false
 order: 6
 images:
-  - ./detail-2.jpg
-  - ./detail-3.jpg
+  - src/content/works/rosalie-gilberts-bookcover/detail-2.jpg
+  - src/content/works/rosalie-gilberts-bookcover/detail-3.jpg
 ---
 Rosalie Gilbert of "Rosalie's Medieval Woman" wrote a book on the
 
